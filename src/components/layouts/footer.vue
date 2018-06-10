@@ -5,7 +5,7 @@
       <strong>2018</strong>
     </div>
     <div>
-      <strong>Copyright</strong> Neostream Technology Group &copy; 2018
+      Neostream Technology Group
     </div>
   </div>
 </template>
