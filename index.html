@@ -1,12 +1,139 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>lrc-cms-frontend</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <!-- built files will be auto injected -->
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>lrc-cms-frontend</title>
+
+  <!--CDN-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
+  <!--END OF CDN-->
+
+  <!--INSPINA CSS-->
+  <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/static/css/animate.css" rel="stylesheet">
+  <link href="/static/css/style.css" rel="stylesheet">
+  <link href="/static/css/plugins/iCheck/custom.css" rel="stylesheet">
+  <link href="/static/css/plugins/steps/jquery.steps.css" rel="stylesheet">
+  <!--END OF INSPINIA-->
+</head>
+
+<body>
+  <div id="app"></div>
+  <!-- built files will be auto injected -->
+
+  <!--INSPINIA JAVASCRIPT AND JQUERY-->
+  <!-- iCheck -->
+  <script src="/static/js/plugins/iCheck/icheck.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('.i-checks').iCheck({
+        checkboxClass: 'icheckbox_square-green',
+        radioClass: 'iradio_square-green',
+      });
+    });
+
+  </script>
+  <script src="/static/js/plugins/metisMenu/jquery.metisMenu.js"></script>
+  <script src="/static/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+  <!-- Custom and plugin javascript -->
+  <script src="/static/js/inspinia.js"></script>
+  <script src="/static/js/plugins/pace/pace.min.js"></script>
+
+  <!-- Steps -->
+  <script src="/static/js/plugins/steps/jquery.steps.min.js"></script>
+
+  <!-- Jquery Validate -->
+  <script src="/static/js/plugins/validate/jquery.validate.min.js"></script>
+
+  <script>
+    $(document).ready(function () {
+      $("#wizard").steps();
+      $("#form").steps({
+        bodyTag: "fieldset",
+        onStepChanging: function (event, currentIndex, newIndex) {
+          // Always allow going backward even if the current step contains invalid fields!
+          if (currentIndex > newIndex) {
+            return true;
+          }
+
+          // Forbid suppressing "Warning" step if the user is to young
+          if (newIndex === 3 && Number($("#age").val()) < 18) {
+            return false;
+          }
+
+          var form = $(this);
+
+          // Clean up if user went backward before
+          if (currentIndex < newIndex) {
+            // To remove error styles
+            $(".body:eq(" + newIndex + ") label.error", form).remove();
+            $(".body:eq(" + newIndex + ") .error", form).removeClass("error");
+          }
+
+          // Disable validation on fields that are disabled or hidden.
+          form.validate().settings.ignore = ":disabled,:hidden";
+
+          // Start validation; Prevent going forward if false
+          return form.valid();
+        },
+        onStepChanged: function (event, currentIndex, priorIndex) {
+          // Suppress (skip) "Warning" step if the user is old enough.
+          if (currentIndex === 2 && Number($("#age").val()) >= 18) {
+            $(this).steps("next");
+          }
+
+          // Suppress (skip) "Warning" step if the user is old enough and wants to the previous step.
+          if (currentIndex === 2 && priorIndex === 3) {
+            $(this).steps("previous");
+          }
+        },
+        onFinishing: function (event, currentIndex) {
+          var form = $(this);
+
+          // Disable validation on fields that are disabled.
+          // At this point it's recommended to do an overall check (mean ignoring only disabled fields)
+          form.validate().settings.ignore = ":disabled";
+
+          // Start validation; Prevent form submission if false
+          return form.valid();
+        },
+        onFinished: function (event, currentIndex) {
+          var form = $(this);
+
+          // Submit form input
+          form.submit();
+        }
+      }).validate({
+        errorPlacement: function (error, element) {
+          element.before(error);
+        },
+        rules: {
+          confirm: {
+            equalTo: "#password"
+          }
+        }
+      });
+    });
+
+  </script>
+
+</body>
+
 </html>
+
