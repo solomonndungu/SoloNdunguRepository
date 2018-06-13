@@ -1,54 +1,69 @@
 <template>
   <form @submit.prevent="validateBeforeSubmit">
     <div class="row">
+      <fieldset>
+        <div class="col-md-4">
+          <input type="url" src="" alt=""
+          :class="{ 'form-control':true }" name="avatar" placeholder="picture"
+          v-model="avatar" v-validate="'required| url'">
+          <i v-show="errors.has(avatar)" class="fa fa-warning"></i>
+          <span v-show="errors.has('avatar')" class="text-danger">
+            {{ errors.first('avatar') }}
+          </span>
+        </div>
+      </fieldset>
+      <fieldset>
       <div class="col-md-4">
         <div class="form-group">
           <label class="label">First name</label>
-          <input name="firstname" v-model="firstname" v-validate="'required|alpha'"
+          <input name="firstName" v-model="firstname" v-validate="'required|alpha'"
             :class="{'form-control': true }"
             type="text" placeholder="First Name">
-          <i v-show="errors.has('firstname')" class="fa fa-warning"></i>
-          <span v-show="errors.has('firstname')" class="text-danger">
-            {{ errors.first('firstname') }}
+          <i v-show="errors.has('firstName')" class="fa fa-warning"></i>
+          <span v-show="errors.has('firstName')" class="text-danger">
+            {{ errors.first('firstName') }}
           </span>
         </div>
       </div>
       <div class="col-md-4">
         <div class="form-group">
           <label class="label">Middle name</label>
-          <input name="middlename" v-model="middlename" v-validate="'required|alpha'"
+          <input name="middleName" v-model="middlename" v-validate="'required|alpha'"
             :class="{'form-control': true }"
             type="text" placeholder="Middle Name" required>
-          <i v-show="errors.has('middlename')" class="fa fa-warning"></i>
-          <span v-show="errors.has('middlename')" class="text-danger">
-            {{ errors.first('middlename') }}
+          <i v-show="errors.has('middleName')" class="fa fa-warning"></i>
+          <span v-show="errors.has('middleName')" class="text-danger">
+            {{ errors.first('middleName') }}
           </span>
         </div>
       </div>
       <div class="col-md-4">
         <div class="form-group">
           <label class="label">Last name</label>
-          <input name="lastname" v-model="lastname" v-validate="'required|alpha'"
+          <input name="lastName" v-model="lastname" v-validate="'required|alpha'"
             :class="{'form-control': true }"
             type="text" placeholder="Last Name" required>
-          <i v-show="errors.has('lastname')" class="fa fa-warning"></i>
-          <span v-show="errors.has('lastname')" class="text-danger">
-            {{ errors.first('lastname') }}
+          <i v-show="errors.has('lastName')" class="fa fa-warning"></i>
+          <span v-show="errors.has('lastName')" class="text-danger">
+            {{ errors.first('lastName') }}
           </span>
         </div>
     </div>
-    </div>
-      <div class="col-md-12">
+    </fieldset>
+    <fieldset>
+    <div class="col-md-12">
       <div class="form-group">
         <label class="label">Select Your Gender</label>
         <label class="radio-inline">
-          <input type="radio" name="male" required>Male
+          <input type="radio" name="male" v-model="genderMale" required>Male
         </label>
         <label class="radio-inline">
-          <input type="radio" name="female" required>Female
+          <input type="radio" name="female" v-model="genderFemale" required>Female
         </label>
       </div>
     </div>
+    </fieldset>
+    <fieldset>
     <div class="col-md-4">
       <div class="form-group">
       <label class="label">ID Number</label>
@@ -61,51 +76,51 @@
       </span>
       </div>
     </div>
-    <div class="col-sm-4 pull-left">
+    </fieldset>
+    <fieldset>
+    <div class="col-sm-4">
       <div class="form-group">
         <label class="label">Enter Birth Date</label>
-        <input name="idNumber" v-model="idNumber" v-validate="'required|numeric'"
+        <input name="birthDate" v-model="idNumber" v-validate="'required|numeric'"
           :class="{'form-control': true }"
-          type="number" placeholder="Enter ID Number" required>
-        <i v-show="errors.has('idNumber')" class="fa fa-warning"></i>
-        <span v-show="errors.has('idNumber')" class="text-danger">
-          {{ errors.first('idNumber') }}
+          type="date" placeholder="Enter date of birth" required>
+        <i v-show="errors.has('birthDate')" class="fa fa-warning"></i>
+        <span v-show="errors.has('birthDate')" class="text-danger">
+          {{ errors.first('birthDate') }}
         </span>
       </div>
     </div>
-
+    </fieldset>
+    <fieldset>
     <div class="col-md-12">
       <div class="form-group">
         <label class="label">Martial Status</label>
         <label class="radio-inline">
-          <input type="radio" name="married" required>married
+          <input type="radio" name="married" v-model="statusMarried" required>married
         </label>
         <label class="radio-inline">
-          <input type="radio" name="single" required>Single
+          <input type="radio" name="single" v-model="statusSingle" required>Single
         </label>
         <label class="radio-inline">
-          <input type="radio" name="separated" required>Separated
+          <input type="radio" name="separated" v-model="statusSeparated" required>Separated
         </label>
         <label class="radio-inline">
-          <input type="radio" name="widowed" required>Widowed
+          <input type="radio" name="widowed" v-model="statusWidowed" required>Widowed
         </label>
       </div>
     </div>
-
+    </fieldset>
+    </div>
   </form>
 </template>
 
 <script>
 export default {
   name: 'BioData',
-  data: () => ({
-
-  }),
-  methods: {
-  },
+  data: () => ({}),
+  methods: {},
 };
 </script>
 
 <style>
-
 </style>
