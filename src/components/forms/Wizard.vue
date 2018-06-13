@@ -43,7 +43,7 @@
 
               <h1>Family Relationships</h1>
               <div class="step-content scrollable">
-                <biodata-form></biodata-form>
+                <family-information-form></family-information-form>
               </div>
             </div>
 
@@ -61,6 +61,7 @@ import ContactInformation from './profile/ContactInformation';
 import LocationInformation from './profile/LocationInformation';
 import ProfessionInformation from './profile/ProfessionInformation';
 import SpiritualInformation from './profile/SpiritualInformation';
+import FamilyInformation from './profile/FamilyInformation';
 
 export default {
   name: 'Wizard',
@@ -69,7 +70,8 @@ export default {
     'contact-information-form': ContactInformation,
     'location-information-form': LocationInformation,
     'profession-information-form': ProfessionInformation,
-    'spiritual-information-form' : SpiritualInformation,
+    'spiritual-information-form': SpiritualInformation,
+    'family-information-form': FamilyInformation,
   },
 };
 </script>
