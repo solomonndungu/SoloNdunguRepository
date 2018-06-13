@@ -28,7 +28,7 @@
 
               <h1>Spiritual Infromation</h1>
               <div class="step-content scrollable">
-                <biodata-form></biodata-form>
+                <spiritual-information-form></spiritual-information-form>
               </div>
 
               <h1>Professional Details</h1>
@@ -60,6 +60,7 @@ import BioDataInformation from './profile/BioDataInformation';
 import ContactInformation from './profile/ContactInformation';
 import LocationInformation from './profile/LocationInformation';
 import ProfessionInformation from './profile/ProfessionInformation';
+import SpiritualInformation from './profile/SpiritualInformation';
 
 export default {
   name: 'Wizard',
@@ -68,6 +69,7 @@ export default {
     'contact-information-form': ContactInformation,
     'location-information-form': LocationInformation,
     'profession-information-form': ProfessionInformation,
+    'spiritual-information-form' : SpiritualInformation,
   },
 };
 </script>
