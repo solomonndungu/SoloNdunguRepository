@@ -37,6 +37,18 @@
           </span>
         </div>
     </div>
+    </div>
+      <div class="col-md-12">
+      <div class="form-group">
+        <label class="label">Select Your Gender</label>
+        <label class="radio-inline">
+          <input type="radio" name="male" required>Male
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="female" required>Female
+        </label>
+      </div>
+    </div>
     <div class="col-md-4">
       <div class="form-group">
       <label class="label">ID Number</label>
@@ -49,7 +61,7 @@
       </span>
       </div>
     </div>
-    <div class="col-sm-4">
+    <div class="col-sm-4 pull-left">
       <div class="form-group">
         <label class="label">Enter Birth Date</label>
         <input name="idNumber" v-model="idNumber" v-validate="'required|numeric'"
@@ -61,17 +73,7 @@
         </span>
       </div>
     </div>
-    <div class="col-md-12">
-      <div class="form-group">
-        <label class="label">Select Your Gender</label>
-        <label class="radio-inline">
-          <input type="radio" name="male" required>Male
-        </label>
-        <label class="radio-inline">
-          <input type="radio" name="female" required>Female
-        </label>
-      </div>
-    </div>
+
     <div class="col-md-12">
       <div class="form-group">
         <label class="label">Martial Status</label>
@@ -89,7 +91,7 @@
         </label>
       </div>
     </div>
-    </div>
+
   </form>
 </template>
 
