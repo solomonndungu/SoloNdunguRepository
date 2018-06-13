@@ -12,7 +12,7 @@
             </p>
             <div id="wizard" class="wizard-big">
               <h1 class="hidden-sm">BioData</h1>
-              <div class="step-content">
+              <div class="step-content scrollable">
                 <biodata-form></biodata-form>
               </div>
 
@@ -23,7 +23,7 @@
 
               <h1>Residency &amp; Nationality</h1>
               <div class="step-content">
-                <biodata-form></biodata-form>
+                <location-form></location-form>
               </div>
 
               <h1>Spiritual Infromation</h1>
@@ -45,7 +45,6 @@
               <div class="step-content">
                 <biodata-form></biodata-form>
               </div>
-
             </div>
 
           </div>
@@ -57,15 +56,20 @@
 
 <script>
 import BioDataForm from './profile/BioData';
+import Location from './profile/Location';
 
 export default {
   name: 'Wizard',
   components: {
     'biodata-form': BioDataForm,
+    'location-form': Location,
   },
 };
 </script>
 
 <style>
-
+.scrollable {
+    height: 100px; /* or any value */
+    overflow-y: auto;
+}
 </style>
