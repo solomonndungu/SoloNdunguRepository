@@ -38,7 +38,7 @@
 
               <h1>Academic Details</h1>
               <div class="step-content scrollable">
-                <biodata-form></biodata-form>
+                <academic-information-form></academic-information-form>
               </div>
 
               <h1>Family Relationships</h1>
@@ -61,6 +61,7 @@ import ContactInformation from './profile/ContactInformation';
 import LocationInformation from './profile/LocationInformation';
 import ProfessionInformation from './profile/ProfessionInformation';
 import SpiritualInformation from './profile/SpiritualInformation';
+import AcademicInformation from './profile/AcademicInformation';
 
 export default {
   name: 'Wizard',
@@ -69,7 +70,8 @@ export default {
     'contact-information-form': ContactInformation,
     'location-information-form': LocationInformation,
     'profession-information-form': ProfessionInformation,
-    'spiritual-information-form' : SpiritualInformation,
+    'spiritual-information-form': SpiritualInformation,
+    'academic-information-form': AcademicInformation,
   },
 };
 </script>
