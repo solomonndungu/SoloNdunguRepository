@@ -10,36 +10,42 @@
             <p>
               Please in your details
             </p>
-            <div id="wizard">
-              <h1>First Step</h1>
+            <div id="wizard" class="wizard-big">
+              <h1 class="hidden-sm">BioData</h1>
               <div class="step-content">
-                <div class="text-center m-t-md">
-                  <h2>Hello in Step 1</h2>
-                  <p>
-                    This is the first content.
-                  </p>
-                </div>
+                <biodata-form></biodata-form>
               </div>
 
-              <h1>Second Step</h1>
+              <h1>Contact Infromation</h1>
               <div class="step-content">
-                <div class="text-center m-t-md">
-                  <h2>This is step 2</h2>
-                  <p>
-                    This content is diferent than the first one.
-                  </p>
-                </div>
+                <biodata-form></biodata-form>
               </div>
 
-              <h1>Third Step</h1>
+              <h1>Residency &amp; Nationality</h1>
               <div class="step-content">
-                <div class="text-center m-t-md">
-                  <h2>This is step 3</h2>
-                  <p>
-                    This is last content.
-                  </p>
-                </div>
+                <biodata-form></biodata-form>
               </div>
+
+              <h1>Spiritual Infromation</h1>
+              <div class="step-content">
+                <biodata-form></biodata-form>
+              </div>
+
+              <h1>Professional Details</h1>
+              <div class="step-content">
+                <biodata-form></biodata-form>
+              </div>
+
+              <h1>Academic Details</h1>
+              <div class="step-content">
+                <biodata-form></biodata-form>
+              </div>
+
+              <h1>Family Relationships</h1>
+              <div class="step-content">
+                <biodata-form></biodata-form>
+              </div>
+
             </div>
 
           </div>
@@ -49,10 +55,14 @@
   </div>
 </template>
 
-
 <script>
+import BioDataForm from './profile/BioData';
+
 export default {
   name: 'Wizard',
+  components: {
+    'biodata-form': BioDataForm,
+  },
 };
 </script>
 
