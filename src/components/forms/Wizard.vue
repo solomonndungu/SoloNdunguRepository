@@ -13,22 +13,22 @@
             <div id="wizard" class="wizard-big">
               <h1 class="hidden-sm">BioData</h1>
               <div class="step-content scrollable">
-                <biodata-form></biodata-form>
+                <biodata-information-form></biodata-information-form>
               </div>
 
               <h1>Contact Infromation</h1>
               <div class="step-content scrollable">
-                <biodata-form></biodata-form>
+                <contact-information-form></contact-information-form>
               </div>
 
               <h1>Residency &amp; Nationality</h1>
               <div class="step-content scrollable">
-                <location-form></location-form>
+                <location-information-form></location-information-form>
               </div>
 
               <h1>Spiritual Infromation</h1>
               <div class="step-content scrollable">
-                <biodata-form></biodata-form>
+                <profession-information-form></profession-information-form>
               </div>
 
               <h1>Professional Details</h1>
@@ -51,18 +51,23 @@
         </div>
       </div>
     </div>
+
   </div>
 </template>
 
 <script>
-import BioDataForm from './profile/BioData';
-import Location from './profile/Location';
+import BioDataInformation from './profile/BioDataInformation';
+import ContactInformation from './profile/ContactInformation';
+import LocationInformation from './profile/LocationInformation';
+import ProfessionInformation from './profile/ProfessionInformation';
 
 export default {
   name: 'Wizard',
   components: {
-    'biodata-form': BioDataForm,
-    'location-form': Location,
+    'biodata-information-form': BioDataInformation,
+    'contact-information-form': ContactInformation,
+    'location-information-form': LocationInformation,
+    'profession-information-form': ProfessionInformation,
   },
 };
 </script>

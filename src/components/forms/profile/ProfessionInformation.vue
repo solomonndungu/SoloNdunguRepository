@@ -1,5 +1,6 @@
 <template>
   <form @submit.prevent="validateBeforeSubmit">
+    <legend>Residence and Nationality</legend>
     <div class="row">
       <fieldset>
         <div class="col-md-4">
@@ -43,13 +44,27 @@
         </div>
       </div>
     </fieldset>
+    <fieldset>
+      <div class="col-md-4">
+        <div class="form-group">
+          <label class="label">Home Address</label>
+          <input name="home" v-model="city" v-validate="'required|alpha'"
+            :class="{'form-control': true }" placeholder="Enter your home address"
+            type="text" required>
+          <i v-show="errors.has('home')" class="fa fa-warning"></i>
+          <span v-show="errors.has('home')" class="text-danger">
+            {{ errors.first('home') }}
+          </span>
+        </div>
+      </div>
+    </fieldset>
     </div>
   </form>
 </template>
 
 <script>
 export default {
-  name: 'Location',
+  name: 'ProfessionInformation',
   data: () => ({}),
   methods: {},
 };

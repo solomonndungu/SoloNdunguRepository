@@ -117,7 +117,7 @@
 
 <script>
 export default {
-  name: 'BioData',
+  name: 'BioDataInformation',
   data: () => ({}),
   methods: {},
 };
