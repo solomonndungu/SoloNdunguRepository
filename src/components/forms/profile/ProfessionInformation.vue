@@ -1,63 +1,85 @@
 <template>
   <form @submit.prevent="validateBeforeSubmit">
-    <legend>Residence and Nationality</legend>
+    <legend>Profession Details</legend>
     <div class="row">
       <fieldset>
-        <div class="col-md-4">
+        <div class="col-md-12">
           <div class="form-group">
-            <label class="label">Country of Residence</label>
-            <input name="country" v-model="country" v-validate="'required|alpha'"
-              :class="{'form-control': true }" type="text" placeholder="Country of residence"
-              required>
-            <i v-show="errors.has('country')" class="fa fa-warning"></i>
-            <span v-show="errors.has('country')" class="text-danger">
-              {{ errors.first('country') }}
-            </span>
+            <label class="label">Occupation Status</label>
+            <label class="radio-inline">
+              <input type="radio" name="occupation" v-model="employed" required>Employed
+            </label>
+            <label class="radio-inline">
+              <input type="radio" name="occupation" v-model="selfEmployed" required>Self-Employed
+            </label>
+            <label class="radio-inline">
+              <input type="radio" name="occupation" v-model="unEmployed" required>Unemployed
+            </label>
           </div>
         </div>
       </fieldset>
       <fieldset>
         <div class="col-md-4">
           <div class="form-group">
-            <label class="label">City/ County of Residence</label>
-            <input name="city" v-model="city" v-validate="'required|alpha'"
-              :class="{'form-control': true }" placeholder="Enter City/ Country of residence"
-              type="text" required>
-            <i v-show="errors.has('city')" class="fa fa-warning"></i>
-            <span v-show="errors.has('city')" class="text-danger">
-              {{ errors.first('city') }}
+            <label for="expertise">Area of Expertise</label>
+            <select name="expertise" id="expertise" class="form-control"
+            placeholder="Area of Expertise">
+              <option value=""> job </option>
+            </select>
+          </div>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Work/ Employment History</legend>
+        <div class="col-md-2">
+          <div class="form-group">
+            <label class="label">Institution</label>
+            <input name="institution" v-model="institution" v-validate="'required|alpha'"
+              :class="{'form-control': true }"
+              type="text" placeholder="Institution">
+            <i v-show="errors.has('institution')" class="fa fa-warning"></i>
+            <span v-show="errors.has('institution')" class="text-danger">
+              {{ errors.first('institution') }}
             </span>
           </div>
         </div>
-    </fieldset>
-    <fieldset>
-      <div class="col-md-4">
-        <div class="form-group">
-          <label class="label">Nationality</label>
-          <input name="nationality" v-model="city" v-validate="'required|alpha'"
-            :class="{'form-control': true }" placeholder="Enter your nationality"
-            type="text" required>
-          <i v-show="errors.has('nationality')" class="fa fa-warning"></i>
-          <span v-show="errors.has('nationality')" class="text-danger">
-            {{ errors.first('nationality') }}
-          </span>
+        <div class="col-md-2">
+          <div class="form-group">
+            <label class="label">From Date/ Year</label>
+            <input name="employmentStart" v-model="employmentStart" v-validate="'required|alpha'"
+              :class="{'form-control': true }"
+              type="date" required>
+            <i v-show="errors.has('employmentStart')" class="fa fa-warning"></i>
+            <span v-show="errors.has('employmentStart')" class="text-danger">
+              {{ errors.first('employmentStart') }}
+            </span>
+          </div>
         </div>
-      </div>
-    </fieldset>
-    <fieldset>
-      <div class="col-md-4">
-        <div class="form-group">
-          <label class="label">Home Address</label>
-          <input name="home" v-model="city" v-validate="'required|alpha'"
-            :class="{'form-control': true }" placeholder="Enter your home address"
-            type="text" required>
-          <i v-show="errors.has('home')" class="fa fa-warning"></i>
-          <span v-show="errors.has('home')" class="text-danger">
-            {{ errors.first('home') }}
-          </span>
+        <div class="col-md-2">
+          <div class="form-group">
+            <label class="label">End Date/ Year</label>
+            <input name="employmentEnd" v-model="employmentEnd" v-validate="'required|alpha'"
+              :class="{'form-control': true }"
+              type="date" required>
+            <i v-show="errors.has('employmentEnd')" class="fa fa-warning"></i>
+            <span v-show="errors.has('employmentEnd')" class="text-danger">
+              {{ errors.first('employmentEnd') }}
+            </span>
+          </div>
         </div>
-      </div>
-    </fieldset>
+        <div class="col-md-2">
+          <div class="form-group">
+            <label class="label">Role</label>
+            <input name="employmentRole" v-model="employmentRole" v-validate="'required|alpha'"
+              :class="{'form-control': true }"
+              type="date" required>
+            <i v-show="errors.has('employmentRole')" class="fa fa-warning"></i>
+            <span v-show="errors.has('employmentRole')" class="text-danger">
+              {{ errors.first('employmentRole') }}
+            </span>
+          </div>
+        </div>
+      </fieldset>
     </div>
   </form>
 </template>

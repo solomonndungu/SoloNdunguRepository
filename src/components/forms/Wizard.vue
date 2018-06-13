@@ -28,12 +28,12 @@
 
               <h1>Spiritual Infromation</h1>
               <div class="step-content scrollable">
-                <profession-information-form></profession-information-form>
+                <biodata-form></biodata-form>
               </div>
 
               <h1>Professional Details</h1>
               <div class="step-content scrollable">
-                <biodata-form></biodata-form>
+                <profession-information-form></profession-information-form>
               </div>
 
               <h1>Academic Details</h1>
