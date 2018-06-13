@@ -31,6 +31,8 @@
   <link href="/static/css/plugins/iCheck/custom.css" rel="stylesheet">
   <link href="/static/css/plugins/steps/jquery.steps.css" rel="stylesheet">
   <!--END OF INSPINIA-->
+  <!--Maps-->
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDQTpXj82d8UpCi97wzo_nKXL7nYrd4G70"></script>
 </head>
 
 <body>
@@ -69,10 +71,24 @@
       $("#wizard").steps();
     });
     $(function(){
-    $('#date').combodate();    
+    $('#date').combodate();
     });
 
   </script>
+  <script>
+    function initMap() {
+       var shop = {lat: -1.206156623460145, lng: 36.91600978374481};
+       var map = new google.maps.Map(document.getElementById('map'), {
+         zoom: 20,
+         center: shop
+       });
+       var marker = new google.maps.Marker({
+         position: shop,
+         map: map
+       });
+     }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC4PuNE8gAqk0W2ErD-9eJjzcthrnaILgs&callback=initMap" type="text/javascript"></script>
 
 </body>
 

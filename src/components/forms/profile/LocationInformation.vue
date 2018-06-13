@@ -1,4 +1,5 @@
 <template>
+<div>
   <form @submit.prevent="validateBeforeSubmit">
     <legend>Residence and Nationality</legend>
     <div class="row">
@@ -60,6 +61,19 @@
     </fieldset>
     </div>
   </form>
+     <div class="row">
+          <div class="col-md-6">
+            <div class="ibox ">
+             <div class="ibox-title">
+             <h5>Google Maps</h5>
+            </div>
+           <div class="ibox-content">
+     <div class="google-map" id="map"></div>
+    </div>
+    </div>
+     </div>
+</div>
+</div>
 </template>
 
 <script>
