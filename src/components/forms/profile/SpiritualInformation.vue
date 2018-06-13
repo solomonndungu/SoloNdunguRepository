@@ -1,7 +1,7 @@
 <template>
 
   <form @submit.prevent="validateBeforeSubmit">
-    <legend>Contact Information</legend>
+    <legend>Spiritual Information</legend>
     <div class="row">
     <fieldset>
     <div class="col-sm-4">

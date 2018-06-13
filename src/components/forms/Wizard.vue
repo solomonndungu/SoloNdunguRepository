@@ -27,6 +27,7 @@
               </div>
 
               <h1>Spiritual Infromation</h1>
+              <i class="fa fa-dove"></i>
               <div class="step-content scrollable">
                 <spiritual-information-form></spiritual-information-form>
               </div>
