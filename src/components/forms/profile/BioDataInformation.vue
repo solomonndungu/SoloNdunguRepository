@@ -56,10 +56,10 @@
       <div class="form-group">
         <label class="label">Select Your Gender</label>
         <label class="radio-inline">
-          <input type="radio" name="male" v-model="genderMale" required>Male
+          <input type="radio" name="gender" v-model="genderMale" required>Male
         </label>
         <label class="radio-inline">
-          <input type="radio" name="female" v-model="genderFemale" required>Female
+          <input type="radio" name="gender" v-model="genderFemale" required>Female
         </label>
       </div>
     </div>
@@ -67,7 +67,7 @@
     <fieldset>
     <div class="col-md-4">
       <div class="form-group">
-      <label class="label">ID Number</label>
+      <label class="label">Area of expertise</label>
       <input name="idNumber" v-model="idNumber" v-validate="'required|numeric'"
         :class="{'form-control': true }"
         type="number" placeholder="Enter ID Number" required>
@@ -97,16 +97,16 @@
       <div class="form-group">
         <label class="label">Martial Status</label>
         <label class="radio-inline">
-          <input type="radio" name="married" v-model="statusMarried" required>married
+          <input type="radio" name="maritalStatus" v-model="statusMarried" required>married
         </label>
         <label class="radio-inline">
-          <input type="radio" name="single" v-model="statusSingle" required>Single
+          <input type="radio" name="maritalStatus" v-model="statusSingle" required>Single
         </label>
         <label class="radio-inline">
-          <input type="radio" name="separated" v-model="statusSeparated" required>Separated
+          <input type="radio" name="maritalStatus" v-model="statusSeparated" required>Separated
         </label>
         <label class="radio-inline">
-          <input type="radio" name="widowed" v-model="statusWidowed" required>Widowed
+          <input type="radio" name="maritalStatus" v-model="statusWidowed" required>Widowed
         </label>
       </div>
     </div>

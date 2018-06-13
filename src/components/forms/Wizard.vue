@@ -33,7 +33,7 @@
 
               <h1>Professional Details</h1>
               <div class="step-content scrollable">
-                <biodata-form></biodata-form>
+                <profession-information-form></profession-information-form>
               </div>
 
               <h1>Academic Details</h1>
