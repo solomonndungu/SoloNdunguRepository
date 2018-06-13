@@ -18,12 +18,12 @@
 
               <h1>Contact Infromation</h1>
               <div class="step-content scrollable">
-                <contact-infomation-form></contact-infomation-form>
+                <contact-information-form></contact-information-form>
               </div>
 
               <h1>Residency &amp; Nationality</h1>
-              <div class="step-content">
-                <location-form></location-form>
+              <div class="step-content scrollable">
+                <location-information-form></location-information-form>
               </div>
 
               <h1>Spiritual Infromation</h1>
@@ -32,17 +32,17 @@
               </div>
 
               <h1>Professional Details</h1>
-              <div class="step-content">
+              <div class="step-content scrollable">
                 <biodata-form></biodata-form>
               </div>
 
               <h1>Academic Details</h1>
-              <div class="step-content">
+              <div class="step-content scrollable">
                 <biodata-form></biodata-form>
               </div>
 
               <h1>Family Relationships</h1>
-              <div class="step-content">
+              <div class="step-content scrollable">
                 <biodata-form></biodata-form>
               </div>
             </div>
@@ -56,19 +56,20 @@
 </template>
 
 <script>
-import BioDataForm from './profile/BioData';
+import BioDataInformation from './profile/BioDataInformation';
 import ContactInformation from './profile/ContactInformation';
-import LocationInformation from './profile/Location';
+import LocationInformation from './profile/LocationInformation';
+import ProfessionInformation from './profile/ProfessionInformation';
 import SpiritualInformation from './profile/SpiritualInformation';
-
 
 export default {
   name: 'Wizard',
   components: {
-    'biodata-information-form': BioDataForm,
-    'contact-infomation-form': ContactInformation,
-    'location-form': LocationInformation,
-    'spiritual-information-form': SpiritualInformation,
+    'biodata-information-form': BioDataInformation,
+    'contact-information-form': ContactInformation,
+    'location-information-form': LocationInformation,
+    'profession-information-form': ProfessionInformation,
+    'spiritual-information-form' : SpiritualInformation,
   },
 };
 </script>
