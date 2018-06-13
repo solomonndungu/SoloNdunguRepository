@@ -17,32 +17,32 @@
               </div>
 
               <h1>Contact Infromation</h1>
-              <div class="step-content">
+              <div class="step-content scrollable">
                 <biodata-form></biodata-form>
               </div>
 
               <h1>Residency &amp; Nationality</h1>
-              <div class="step-content">
+              <div class="step-content scrollable">
                 <location-form></location-form>
               </div>
 
               <h1>Spiritual Infromation</h1>
-              <div class="step-content">
+              <div class="step-content scrollable">
                 <biodata-form></biodata-form>
               </div>
 
               <h1>Professional Details</h1>
-              <div class="step-content">
+              <div class="step-content scrollable">
                 <biodata-form></biodata-form>
               </div>
 
               <h1>Academic Details</h1>
-              <div class="step-content">
+              <div class="step-content scrollable">
                 <biodata-form></biodata-form>
               </div>
 
               <h1>Family Relationships</h1>
-              <div class="step-content">
+              <div class="step-content scrollable">
                 <biodata-form></biodata-form>
               </div>
             </div>

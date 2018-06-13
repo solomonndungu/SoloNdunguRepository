@@ -1,5 +1,6 @@
 <template>
   <form @submit.prevent="validateBeforeSubmit">
+    <legend>Bio Data Form</legend>
     <div class="row">
       <fieldset>
         <div class="col-md-4">
