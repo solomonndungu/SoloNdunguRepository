@@ -67,6 +67,10 @@ import FamilyInformation from './profile/FamilyInformation';
 
 export default {
   name: 'Wizard',
+  data:()=> ({
+  
+
+  }),
   components: {
     'biodata-information-form': BioDataInformation,
     'contact-information-form': ContactInformation,

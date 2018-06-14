@@ -16,9 +16,8 @@
       <fieldset>
       <div class="col-md-4">
         <div class="form-group">
-          <label class="label">First name</label>
-          <input name="firstName" v-model="firstName" v-validate="'required|alpha'"
-            :class="{'form-control': true }"
+          <label class="label" for="firstName">First name</label>
+          <input name="firstName" id="firstName" v-model="bioData.firstName"
             type="text" placeholder="First Name">
           <i v-show="errors.has('firstName')" class="fa fa-warning"></i>
           <span v-show="errors.has('firstName')" class="text-danger">
@@ -29,7 +28,7 @@
       <div class="col-md-4">
         <div class="form-group">
           <label class="label">Middle name</label>
-          <input name="middleName" v-model="middleName" v-validate="'required|alpha'"
+          <input name="middleName" v-model="bioData.middleName" v-validate="'required|alpha'"
             :class="{'form-control': true }"
             type="text" placeholder="Middle Name" required>
           <i v-show="errors.has('middleName')" class="fa fa-warning"></i>
@@ -41,7 +40,7 @@
       <div class="col-md-4">
         <div class="form-group">
           <label class="label">Last name</label>
-          <input name="lastName" v-model="lastName" v-validate="'required|alpha'"
+          <input name="lastName" v-model="bioData.lastName" v-validate="'required|alpha'"
             :class="{'form-control': true }"
             type="text" placeholder="Last Name" required>
           <i v-show="errors.has('lastName')" class="fa fa-warning"></i>
@@ -56,10 +55,10 @@
       <div class="form-group">
         <label class="label">Select Your Gender</label>
         <label class="radio-inline">
-          <input type="radio" name="gender" v-model="genderMale" required>Male
+          <input type="radio" name="gender" v-model="bioData.genderMale" required>Male
         </label>
         <label class="radio-inline">
-          <input type="radio" name="gender" v-model="genderFemale" required>Female
+          <input type="radio" name="gender" v-model="bioData.genderFemale" required>Female
         </label>
       </div>
     </div>
@@ -68,7 +67,7 @@
     <div class="col-md-4">
       <div class="form-group">
       <label class="label">Area of expertise</label>
-      <input name="idNumber" v-model="expertise" v-validate="'required|numeric'"
+      <input name="idNumber" v-model="bioData.expertise" v-validate="'required|numeric'"
         :class="{'form-control': true }"
         type="number" placeholder="Enter ID Number" required>
       <i v-show="errors.has('idNumber')" class="fa fa-warning"></i>
@@ -82,7 +81,7 @@
     <div class="col-sm-4">
       <div class="form-group">
         <label class="label">Enter Birth Date</label>
-        <input name="birthDate" v-model="dateOfBirth" v-validate="'required|numeric'"
+        <input name="birthDate" v-model="bioData.dateOfBirth" v-validate="'required|numeric'"
           :class="{'form-control': true }"
           type="date" placeholder="Enter date of birth" required>
         <i v-show="errors.has('birthDate')" class="fa fa-warning"></i>
@@ -97,45 +96,50 @@
       <div class="form-group">
         <label class="label">Marital Status</label>
         <label class="radio-inline" for="married">
-          <input type="radio" id="married" name="maritalStatus" v-model="maritalStatus" required>married
+          <input type="radio" id="married" name="maritalStatus" v-model="bioData.maritalStatus" required>married
         </label>
         <label class="radio-inline" for="single">
-          <input type="radio" id="single" name="maritalStatus" v-model="maritalStatus" required>Single
+          <input type="radio" id="single" name="maritalStatus" v-model="bioData.maritalStatus" required>Single
         </label>
         <label class="radio-inline" fpr="separated">
-          <input type="radio" id="separated" name="maritalStatus" v-model="maritalStatus" required>Separated
+          <input type="radio" id="separated" name="maritalStatus" v-model="bioData.maritalStatus" required>Separated
         </label>
         <label class="radio-inline" fpr="widowed">
-          <input type="radio" id="widowed" name="maritalStatus" v-model="maritalStatus" required>Widowed
+          <input type="radio" id="widowed" name="maritalStatus" v-model="bioData.maritalStatus" required>Widowed
         </label>
       </div>
     </div>
     </fieldset>
     </div>
+    <p>this is the data:{{ firstName}}</p>
+    <p>{{ firstName }}</p>
   </form>
 </template>
 
 <script>
 export default {
-  name: 'BioDataInformation',
+  name: "BioDataInformation",
   data: () => ({
-        //Bind the form input to this empty data
-    firstName:'',
-    middleName:'',
-    lastName:'',
-    genderMale:'',
-    genderFemale:'',
-    expertise:'',
-    dateOfBirth:'',
-    maritalSatatus:'',
-    bioData:[]
-
+    //Bind the form input to this empty data
+    firstName: "",
+    bioData: {
+      firstName: "",
+      middleName: "",
+      lastName: "",
+      genderMale: "",
+      genderFemale: "",
+      expertise: "",
+      dateOfBirth: "",
+      maritalStatus: ""
+    }
   }),
   watch: {
-    bioData: (bioData) => ({
-
-    })
+    bioData: () => {
+      data = this.bioData;
+      console.log(data);
+    }
   },
+  computed: {}
 };
 </script>
 
