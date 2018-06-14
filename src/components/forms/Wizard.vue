@@ -73,7 +73,7 @@ export default {
     'location-information-form': LocationInformation,
     'profession-information-form': ProfessionInformation,
     'spiritual-information-form': SpiritualInformation,
-    'academic-information-form': 'AcademicInformation',
+    'academic-information-form': AcademicInformation,
     'family-information-form': FamilyInformation,
   },
 };
