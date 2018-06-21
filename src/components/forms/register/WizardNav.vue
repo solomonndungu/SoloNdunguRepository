@@ -81,6 +81,10 @@
 <script>
 export default {
   name: 'WizardNav',
+  data() {
+    return {
+    };
+  },
 };
 </script>
 

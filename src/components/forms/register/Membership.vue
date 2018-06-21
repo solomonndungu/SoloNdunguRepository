@@ -60,15 +60,15 @@
 <script>
 export default {
   name: 'Membership',
-  data: () => ({
-    return : {
+  data() {
+    return {
       picked: '',
       date: '',
       month: '',
       year: '',
-    },
-  }),
-}
+    };
+  },
+};
 </script>
 
 <style>

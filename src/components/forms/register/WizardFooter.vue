@@ -20,6 +20,7 @@ export default {
   name: 'WizardFooter',
   data() {
     return {
+      step: 1,
       firstName: '',
       middleName: '',
       lastName: '',
@@ -27,11 +28,6 @@ export default {
   },
   methods: {
     moveNext() {
-      const elementId = event.currentTarget.id;
-      console.log(elementId);
-      if (elementId >= 1) {
-        console.log('MOVING TO THE NEXT STEP 🚀');
-      }
     },
   },
 };

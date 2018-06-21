@@ -129,19 +129,21 @@
 <script>
 export default {
   name: 'SpiritualForm',
-  return: {
-    salvationDate: '',
-    salvationMonth: '',
-    salvationYear: '',
-    baptismDate: '',
-    baptismMonth: '',
-    baptismYear: '',
-    serviceDate: '',
-    serviceMonth: '',
-    serviceYear: '',
-    churchName: '',
-    yourRoles: '',
-    fromDate: '',
+  data() {
+    return {
+      salvationDate: '',
+      salvationMonth: '',
+      salvationYear: '',
+      baptismDate: '',
+      baptismMonth: '',
+      baptismYear: '',
+      serviceDate: '',
+      serviceMonth: '',
+      serviceYear: '',
+      churchName: '',
+      yourRoles: '',
+      fromDate: '',
+    };
   },
 };
 </script>

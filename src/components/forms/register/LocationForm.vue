@@ -50,12 +50,9 @@
         <div class="col-md-8 col-xs-9">
           <input type="text" name="email" id="email"
           placeholder="Area of Residence"
-          class="dropselectsec" autocomplete="off" v-model="Area">
+          class="dropselectsec" autocomplete="off" v-model="area">
         </div>
       </div>
-
-
-
   </div>
 </div>
 </template>
@@ -63,12 +60,14 @@
 <script>
 export default {
   name: 'LocationForm',
-  return: {
-    country: '',
-    city: '',
-    area: '',
-    nationality: '',
-  }
+  data() {
+    return {
+      country: '',
+      city: '',
+      area: '',
+      nationality: '',
+    };
+  },
 };
 </script>
 

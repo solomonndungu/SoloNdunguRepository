@@ -14,22 +14,22 @@
                 <div class="tab-pane active" role="tabpanel" id="step1">
                   <personal-form></personal-form>
                 </div>
-                <div class="tab-pane active" role="tabpanel" id="step2">
+                <div class="tab-pane active" role="tabpanel" id="step2" >
                   <membership-form></membership-form>
                 </div>
-                <div class="tab-pane" role="tabpanel" id="step3">
+                <div class="tab-pane" role="tabpanel" id="step3" >
                   <contact-form></contact-form>
                 </div>
-                <div class="tab-pane" role="tabpanel" id="step4">
+                <div class="tab-pane" role="tabpanel" id="step4" >
                   <location-form></location-form>
                 </div>
-                <div class="tab-pane" role="tabpanel" id="step5">
+                <div class="tab-pane" role="tabpanel" id="step5" >
                   <profession-form></profession-form>
                 </div>
-                <div class="tab-pane" role="tabpanel" id="step6">
+                <div class="tab-pane" role="tabpanel" id="step6" >
                   <spiritual-form></spiritual-form>
                 </div>
-                <div class="tab-pane" role="tabpanel" id="step7">
+                <div class="tab-pane" role="tabpanel" id="step7" >
                   <academic-form></academic-form>
                 </div>
                 <div class="tab-pane" role="tabpanel" id="step8">
@@ -39,6 +39,7 @@
 
                 </div>
                 <wizard-footer></wizard-footer>
+                <button @click.prevent="next()"> next</button>
                 <div class="clearfix"></div>
               </div>
             </form>
@@ -64,7 +65,11 @@ import Membership from './register/Membership';
 
 export default {
   name: 'Wizard',
-  data: () => ({}),
+  data() {
+    return {
+      step: 1,
+    };
+  },
   components: {
     'personal-form': PersonalForm,
     'contact-form': ContactForm,
@@ -78,6 +83,8 @@ export default {
     'membership-form': Membership,
   },
   methods: {
+    next() {
+    },
   },
 };
 </script>
