@@ -2,13 +2,14 @@
   <div class="loginColumns animated fadeInDown">
     <div class="row">
       <div class="col-md-6">
-        <h1 class="logo-name">LRC</h1>
+        <h1 class="logo-name">
+          <img src="/static/img/logo.png" class="img-responsive">
+        </h1>
       </div>
       <div class="col-md-6">
         <div class="ibox-content">
             <login-form></login-form>
           <p class="m-t">
-            <small>Inspinia we app framework base on Bootstrap 3 &copy; 2014</small>
           </p>
         </div>
       </div>

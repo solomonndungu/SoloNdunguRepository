@@ -1,92 +1,93 @@
 <template>
-  <div class="wrapper wrapper-content animated fadeInRight">
-    <div class="row">
-      <div class="col-lg-12">
-        <div class="ibox float-e-margins">
-          <div class="ibox-title">
-            <h2>PERSONAL INFORMATION</h2>
-          </div>
-          <div class="ibox-content">
-            <p>
-              Please in your details
-            </p>
-            <div id="wizard" class="wizard-big">
-              <h1 class="hidden-sm">BioData</h1>
-              <div class="step-content scrollable">
-                <biodata-information-form></biodata-information-form>
-              </div>
+<div class="wrapper wrapper-content animated fadeInRight">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="ibox float-e-margins">
+        <div class="ibox-title">
+          <h2>PERSONAL INFORMATION</h2>
+        </div>
+        <div class="ibox-content">
+          <div class="wizard">
+            <wizard-nav></wizard-nav>
+            <form role="form">
+              <div class="tab-content">
+                <div class="tab-pane active" role="tabpanel" id="step1">
+                  <personal-form></personal-form>
+                </div>
+                <div class="tab-pane active" role="tabpanel" id="step2" >
+                  <membership-form></membership-form>
+                </div>
+                <div class="tab-pane" role="tabpanel" id="step3" >
+                  <contact-form></contact-form>
+                </div>
+                <div class="tab-pane" role="tabpanel" id="step4" >
+                  <location-form></location-form>
+                </div>
+                <div class="tab-pane" role="tabpanel" id="step5" >
+                  <profession-form></profession-form>
+                </div>
+                <div class="tab-pane" role="tabpanel" id="step6" >
+                  <spiritual-form></spiritual-form>
+                </div>
+                <div class="tab-pane" role="tabpanel" id="step7" >
+                  <academic-form></academic-form>
+                </div>
+                <div class="tab-pane" role="tabpanel" id="step8">
+                  <family-form></family-form>
+                </div>
+                <div class="tab-pane" role="tabpanel" id="complete">
 
-              <h1>Contact Infromation</h1>
-              <div class="step-content scrollable">
-                <contact-information-form></contact-information-form>
+                </div>
+                <wizard-footer></wizard-footer>
+                <button @click.prevent="next()"> next</button>
+                <div class="clearfix"></div>
               </div>
-
-              <h1>Residency &amp; Nationality</h1>
-              <div class="step-content scrollable">
-                <location-information-form></location-information-form>
-              </div>
-
-              <h1>Spiritual Infromation</h1>
-              <i class="fa fa-dove"></i>
-              <div class="step-content scrollable">
-                <spiritual-information-form></spiritual-information-form>
-              </div>
-
-              <h1>Professional Details</h1>
-              <div class="step-content scrollable">
-                <profession-information-form></profession-information-form>
-              </div>
-
-              <h1>Academic Details</h1>
-              <div class="step-content scrollable">
-                <academic-information-form></academic-information-form>
-              </div>
-
-              <h1>Family Relationships</h1>
-              <div class="step-content scrollable">
-                <family-information-form></family-information-form>
-              </div>
-            </div>
-
+            </form>
           </div>
         </div>
       </div>
     </div>
-    <p>message:{{message}}</p>
   </div>
+</div>
 </template>
 
 <script>
-import BioDataInformation from './profile/BioDataInformation';
-import ContactInformation from './profile/ContactInformation';
-import LocationInformation from './profile/LocationInformation';
-import ProfessionInformation from './profile/ProfessionInformation';
-import SpiritualInformation from './profile/SpiritualInformation';
-import AcademicInformation from './profile/AcademicInformation';
-import FamilyInformation from './profile/FamilyInformation';
+import PersonalForm from './register/PersonalForm';
+import ContactForm from './register/ContactForm';
+import LocationForm from './register/LocationForm';
+import ProfessionForm from './register/ProfessionForm';
+import SpiritualForm from './register/SpiritualForm';
+import AcademicForm from './register/AcademicForm';
+import FamilyForm from './register/FamilyForm';
+import WizardNav from './register/WizardNav';
+import WizardFooter from './register/WizardFooter';
+import Membership from './register/Membership';
 
 export default {
   name: 'Wizard',
   data() {
     return {
-      message: '',
+      step: 1,
     };
   },
   components: {
-    'biodata-information-form': BioDataInformation,
-    'contact-information-form': ContactInformation,
-    'location-information-form': LocationInformation,
-    'profession-information-form': ProfessionInformation,
-    'spiritual-information-form': SpiritualInformation,
-    'academic-information-form': AcademicInformation,
-    'family-information-form': FamilyInformation,
+    'personal-form': PersonalForm,
+    'contact-form': ContactForm,
+    'location-form': LocationForm,
+    'profession-form': ProfessionForm,
+    'spiritual-form': SpiritualForm,
+    'academic-form': AcademicForm,
+    'family-form': FamilyForm,
+    'wizard-nav': WizardNav,
+    'wizard-footer': WizardFooter,
+    'membership-form': Membership,
+  },
+  methods: {
+    next() {
+    },
   },
 };
 </script>
 
 <style>
-.scrollable {
-    height: 100px; /* or any value */
-    overflow-y: auto;
-}
 </style>

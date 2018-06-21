@@ -2,7 +2,7 @@
   <div class="row border-bottom">
     <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
       <div class="navbar-header">
-        <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#">
+        <a class="navbar-minimalize minimalize-styl-2 btn btn-primary" href="#sidebar">
           <i class="fa fa-bars"></i>
         </a>
         <form role="search" class="navbar-form-custom" action="search_results.html">

@@ -1,12 +1,12 @@
 <template>
  <div>
-  <nav class="navbar-default navbar-static-side" role="navigation">
+  <nav class="navbar-default navbar-static-side" role="navigation" id="sidebar">
     <div class="sidebar-collapse">
       <ul class="nav metismenu" id="side-menu">
         <li class="nav-header">
           <div class="dropdown profile-element">
             <span>
-              <img alt="image" class="img-circle" :src="'../../../static/img/profile_small.jpg'" />
+              <img alt="image" class="img-circle" :src="'./static/img/profile_small.jpg'" />
             </span>
             <a data-toggle="dropdown" class="dropdown-toggle" href="#">
               <span class="clear">

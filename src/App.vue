@@ -17,4 +17,7 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   font-family: 'Karla', sans-serif;
 }
+.isDanger{
+  border: 1px solid #880000;
+}
 </style>
