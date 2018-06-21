@@ -18,7 +18,7 @@
     height: 2px;
     background: #e0e0e0;
     position: absolute;
-    width: 90%;
+    width: 85%;
     margin: 0 auto;
     left: 0;
     right: 0;
@@ -34,18 +34,18 @@
 }
 
 span.round-tab {
-    width: 80px;
-    height: 80px;
-    line-height: 80px;
+    width: 65px;
+    height: 65px;
+    line-height: 65px;
     display: inline-block;
-    border-radius: 80px;
+    border-radius: 65px;
     background: #fff;
     border: 2px solid #e0e0e0;
     z-index: 2;
     position: absolute;
     left: 0;
     text-align: center;
-    font-size: 25px;
+    font-size: 22px;
 }
 span.round-tab i{
     color:#555555;
@@ -232,7 +232,7 @@ span.round-tab:hover {
 @media( max-width : 585px ) {
 
     .wizard {
-        width: 90%;
+        width: 80%;
         height: auto !important;
     }
 
@@ -244,11 +244,10 @@ span.round-tab:hover {
     }
 
     .wizard .nav-tabs > li a {
-        width: 50px;
-        height: 50px;
-        line-height: 50px;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
     }
-
     .wizard li.active:after {
         content: " ";
         position: absolute;

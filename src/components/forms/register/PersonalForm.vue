@@ -31,8 +31,22 @@
         </div>
       </div>
     </div>
+
+    <div class="row mar_ned">
+      <div class="form-group">
+        <label class="radio-inline">
+          <input type="radio" name="optradio">Option 1
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="optradio">Option 2
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="optradio">Option 3
+        </label>
+      </div>
+      </div>
+    </div>
   </div>
-</div>
 </template>
 
 <script>
