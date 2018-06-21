@@ -3,7 +3,9 @@
     <div>
       <div>
 
-        <h1 class="logo-name">LRC</h1>
+        <h1 class="logo-name">
+          <img src="/static/img/logo.png" class="img-responsive">
+        </h1>
 
       </div>
       <h3>Register to LRC-CMS</h3>
