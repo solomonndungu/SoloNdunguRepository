@@ -7,7 +7,7 @@
       <div class="col-md-4">
         <div class="form-group">
           <label class="label">Primary Email</label>
-          <input name="primaryEmail" v-model="primaryEmail" v-validate="'required|alpha'"
+          <input name="primaryEmail"  v-validate="'required|alpha'"
             :class="{'form-control': true }"
             type="text" placeholder="Primary Email">
           <i v-show="errors.has('primaryEmail')" class="fa fa-warning"></i>
@@ -21,7 +21,7 @@
       <div class="col-md-4">
         <div class="form-group">
           <label class="label">Alternative Email</label>
-          <input name="alternativeEmail" v-model="alternativeEmail" v-validate="'required|alpha'"
+          <input name="alternativeEmail"  v-validate="'required|alpha'"
             :class="{'form-control': true }"
             type="text" placeholder="Enter your alternative email" required>
           <i v-show="errors.has('alternativeEmail')" class="fa fa-warning"></i>
@@ -35,7 +35,7 @@
       <div class="col-md-4">
         <div class="form-group">
           <label class="label">Primary Phone Number</label>
-          <input name="priPhoneNumber" v-model="priPhoneNumber" v-validate="'required|alpha'"
+          <input name="priPhoneNumber"  v-validate="'required|alpha'"
             :class="{'form-control': true }"
             type="text" placeholder="primary phone number" required>
           <span class="text-muted">eg +254712345678</span>
@@ -50,7 +50,7 @@
       <div class="col-md-4">
         <div class="form-group">
           <label class="label">Home Phone Number</label>
-          <input name="homePhoneNumber" v-model="homePhoneNumber" v-validate="'required|alpha'"
+          <input name="homePhoneNumber"  v-validate="'required|alpha'"
             :class="{'form-control': true }"
             type="text" placeholder="home phone number" required>
           <i v-show="errors.has('homePhoneNumber')" class="fa fa-warning"></i>
@@ -64,7 +64,7 @@
           <div class="col-md-4">
         <div class="form-group">
           <label class="label">Work Phone Number</label>
-          <input name="workPhoneNumber" v-model="workPhoneNumber" v-validate="'required|alpha'"
+          <input name="workPhoneNumber"  v-validate="'required|alpha'"
             :class="{'form-control': true }"
             type="text" placeholder="work phone number" required>
           <i v-show="errors.has('workPhoneNumber')" class="fa fa-warning"></i>
@@ -78,7 +78,7 @@
           <div class="col-md-2">
         <div class="form-group">
           <label class="label">Postal Address</label>
-          <input name="postalAddress" v-model="postalAddress" v-validate="'required|alpha'"
+          <input name="postalAddress"  v-validate="'required|alpha'"
             :class="{'form-control': true }"
             type="text" placeholder="postal Address" required>
           <i v-show="errors.has('postalAddress')" class="fa fa-warning"></i>
@@ -90,7 +90,7 @@
           <div class="col-md-2">
         <div class="form-group">
           <label class="label">Postal Code</label>
-          <input name="postalCode" v-model="postalCode" v-validate="'required|alpha'"
+          <input name="postalCode"  v-validate="'required|alpha'"
             :class="{'form-control': true }"
             type="text" placeholder="postalCode" required>
           <i v-show="errors.has('postalCode')" class="fa fa-warning"></i>
@@ -102,7 +102,7 @@
               <div class="col-md-2">
         <div class="form-group">
           <label class="label">Town</label>
-          <input name="town" v-model="town" v-validate="'required|alpha'"
+          <input name="town"  v-validate="'required|alpha'"
             :class="{'form-control': true }"
             type="text" placeholder="town" required>
           <i v-show="errors.has('town')" class="fa fa-warning"></i>

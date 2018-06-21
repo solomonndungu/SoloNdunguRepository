@@ -52,7 +52,7 @@
         </div>
       </div>
     </div>
-
+    <p>message:{{message}}</p>
   </div>
 </template>
 
@@ -67,10 +67,11 @@ import FamilyInformation from './profile/FamilyInformation';
 
 export default {
   name: 'Wizard',
-  data:()=> ({
-  
-
-  }),
+  data() {
+    return {
+      message: '',
+    };
+  },
   components: {
     'biodata-information-form': BioDataInformation,
     'contact-information-form': ContactInformation,

@@ -7,13 +7,13 @@
           <div class="form-group">
             <label class="label">Occupation Status</label>
             <label class="radio-inline">
-              <input type="radio" name="occupation" v-model="employed" required>Employed
+              <input type="radio" name="occupation"  required>Employed
             </label>
             <label class="radio-inline">
-              <input type="radio" name="occupation" v-model="selfEmployed" required>Self-Employed
+              <input type="radio" name="occupation"  required>Self-Employed
             </label>
             <label class="radio-inline">
-              <input type="radio" name="occupation" v-model="unEmployed" required>Unemployed
+              <input type="radio" name="occupation"  required>Unemployed
             </label>
           </div>
         </div>
@@ -34,7 +34,7 @@
         <div class="col-md-2">
           <div class="form-group">
             <label class="label">Institution</label>
-            <input name="institution" v-model="institution" v-validate="'required|alpha'"
+            <input name="institution" v-validate="'required|alpha'"
               :class="{'form-control': true }"
               type="text" placeholder="Institution">
             <i v-show="errors.has('institution')" class="fa fa-warning"></i>
@@ -46,7 +46,7 @@
         <div class="col-md-2">
           <div class="form-group">
             <label class="label">From Date/ Year</label>
-            <input name="employmentStart" v-model="employmentStart" v-validate="'required|alpha'"
+            <input name="employmentStart"  v-validate="'required|alpha'"
               :class="{'form-control': true }"
               type="date" required>
             <i v-show="errors.has('employmentStart')" class="fa fa-warning"></i>
@@ -58,7 +58,7 @@
         <div class="col-md-2">
           <div class="form-group">
             <label class="label">End Date/ Year</label>
-            <input name="employmentEnd" v-model="employmentEnd" v-validate="'required|alpha'"
+            <input name="employmentEnd"  v-validate="'required|alpha'"
               :class="{'form-control': true }"
               type="date" required>
             <i v-show="errors.has('employmentEnd')" class="fa fa-warning"></i>
@@ -70,7 +70,7 @@
         <div class="col-md-2">
           <div class="form-group">
             <label class="label">Role</label>
-            <input name="employmentRole" v-model="employmentRole" v-validate="'required|alpha'"
+            <input name="employmentRole"  v-validate="'required|alpha'"
               :class="{'form-control': true }"
               type="date" required>
             <i v-show="errors.has('employmentRole')" class="fa fa-warning"></i>

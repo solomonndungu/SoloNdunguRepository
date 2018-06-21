@@ -7,7 +7,7 @@
     <div class="col-sm-4">
       <div class="form-group">
         <label class="label">Date of Salvation</label>
-        <input name="salvationDate" v-model="idNumber" v-validate="'required|numeric'"
+        <input name="salvationDate"  v-validate="'required|numeric'"
           :class="{'form-control': true }"
           type="date" placeholder="Enter date of salvation" required>
         <i v-show="errors.has('salvationDate')" class="fa fa-warning"></i>
@@ -21,7 +21,7 @@
     <div class="col-sm-4">
       <div class="form-group">
         <label class="label">Date of Baptism</label>
-        <input name="baptismDate" v-model="idNumber" v-validate="'required|numeric'"
+        <input name="baptismDate"  v-validate="'required|numeric'"
           :class="{'form-control': true }"
           type="date" placeholder="Enter date of baptism" required>
         <i v-show="errors.has('baptismDate')" class="fa fa-warning"></i>
@@ -35,7 +35,7 @@
     <div class="col-sm-4">
       <div class="form-group">
         <label class="label">Date of First Service Attendance</label>
-        <input name="firstServiceDate" v-model="idNumber" v-validate="'required|numeric'"
+        <input name="firstServiceDate"  v-validate="'required|numeric'"
           :class="{'form-control': true }"
           type="date" placeholder="Enter date of first service Attendace" required>
         <i v-show="errors.has('firstServiceDate')" class="fa fa-warning"></i>
@@ -47,7 +47,7 @@
     <div class="col-sm-4">
       <div class="form-group">
         <label class="label">Date of LRC Membership </label>
-        <input name="membershipDate" v-model="idNumber" v-validate="'required|numeric'"
+        <input name="membershipDate"  v-validate="'required|numeric'"
           :class="{'form-control': true }"
           type="date" placeholder="Enter date of LRC Membership" required>
         <i v-show="errors.has('membershipDate')" class="fa fa-warning"></i>
@@ -62,7 +62,7 @@
       <div class="col-md-2">
         <div class="form-group">
           <label class="label">Church Name</label>
-          <input name="churchName" v-model="churchName" v-validate="'required|alpha'"
+          <input name="churchName"  v-validate="'required|alpha'"
             :class="{'form-control': true }"
             type="text" placeholder="Eg Delivarance Church Githurai" required>
           <i v-show="errors.has('churchName')" class="fa fa-warning"></i>
@@ -74,7 +74,7 @@
         <div class="col-sm-2">
       <div class="form-group">
         <label class="label">From Date/Year</label>
-        <input name="fromDate" v-model="idNumber" v-validate="'required|numeric'"
+        <input name="fromDate"  v-validate="'required|numeric'"
           :class="{'form-control': true }"
           type="date" placeholder="" required>
         <i v-show="errors.has('fromDate')" class="fa fa-warning"></i>
@@ -86,7 +86,7 @@
             <div class="col-sm-2">
       <div class="form-group">
         <label class="label">To Date/Year</label>
-        <input name="toDate" v-model="idNumber" v-validate="'required|numeric'"
+        <input name="toDate"  v-validate="'required|numeric'"
           :class="{'form-control': true }"
           type="date" placeholder="" required>
         <i v-show="errors.has('toDate')" class="fa fa-warning"></i>
@@ -98,7 +98,7 @@
        <div class="col-md-2">
         <div class="form-group">
           <label class="label">Your Role(s)</label>
-          <input name="roles" v-model="churchName" v-validate="'required|alpha'"
+          <input name="roles"  v-validate="'required|alpha'"
             :class="{'form-control': true }"
             type="text" placeholder="Eg Pastor,Worhip Leader,Member etc" required>
           <i v-show="errors.has('role')" class="fa fa-warning"></i>

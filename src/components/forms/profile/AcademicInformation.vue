@@ -7,7 +7,7 @@
       <div class="col-md-2">
         <div class="form-group">
           <label class="label">Institution</label>
-          <input name="institution" v-model="institution" v-validate="'required|alpha'"
+          <input name="institution"  v-validate="'required|alpha'"
             :class="{'form-control': true }"
             type="text" placeholder="Eg NorthGate school" required>
           <i v-show="errors.has('institution')" class="fa fa-warning"></i>
@@ -19,7 +19,7 @@
         <div class="col-sm-2">
       <div class="form-group">
         <label class="label">From Date/Year</label>
-        <input name="fromDate" v-model="idNumber" v-validate="'required|numeric'"
+        <input name="fromDate"  v-validate="'required|numeric'"
           :class="{'form-control': true }"
           type="date" placeholder="" required>
         <i v-show="errors.has('fromDate')" class="fa fa-warning"></i>
@@ -31,7 +31,7 @@
             <div class="col-sm-2">
       <div class="form-group">
         <label class="label">To Date/Year</label>
-        <input name="toDate" v-model="idNumber" v-validate="'required|numeric'"
+        <input name="toDate"  v-validate="'required|numeric'"
           :class="{'form-control': true }"
           type="date" placeholder="" required>
         <i v-show="errors.has('toDate')" class="fa fa-warning"></i>
@@ -43,7 +43,7 @@
        <div class="col-md-2">
         <div class="form-group">
           <label class="label">Qualification</label>
-          <input name="roles" v-model="qualification" v-validate="'required|alpha'"
+          <input name="roles"  v-validate="'required|alpha'"
             :class="{'form-control': true }"
             type="text" placeholder="Eg KCSE Certificate" required>
           <i v-show="errors.has('qualification')" class="fa fa-warning"></i>
@@ -64,7 +64,7 @@
       <div class="col-md-2">
         <div class="form-group">
           <label class="label">Institution</label>
-          <input name="institution" v-model="institution" v-validate="'required|alpha'"
+          <input name="institution"  v-validate="'required|alpha'"
             :class="{'form-control': true }"
             type="text" placeholder="Eg NorthGate school" required>
           <i v-show="errors.has('institution')" class="fa fa-warning"></i>
@@ -76,7 +76,7 @@
         <div class="col-sm-2">
       <div class="form-group">
         <label class="label">From Date/Year</label>
-        <input name="fromDate" v-model="idNumber" v-validate="'required|numeric'"
+        <input name="fromDate"  v-validate="'required|numeric'"
           :class="{'form-control': true }"
           type="date" placeholder="" required>
         <i v-show="errors.has('fromDate')" class="fa fa-warning"></i>
@@ -88,7 +88,7 @@
             <div class="col-sm-2">
       <div class="form-group">
         <label class="label">To Date/Year</label>
-        <input name="toDate" v-model="idNumber" v-validate="'required|numeric'"
+        <input name="toDate"  v-validate="'required|numeric'"
           :class="{'form-control': true }"
           type="date" placeholder="" required>
         <i v-show="errors.has('toDate')" class="fa fa-warning"></i>
@@ -100,7 +100,7 @@
        <div class="col-md-2">
         <div class="form-group">
           <label class="label">Qualification</label>
-          <input name="roles" v-model="qualification" v-validate="'required|alpha'"
+          <input name="roles"  v-validate="'required|alpha'"
             :class="{'form-control': true }"
             type="text" placeholder="Eg KCSE Certificate" required>
           <i v-show="errors.has('qualification')" class="fa fa-warning"></i>
@@ -121,7 +121,7 @@
       <div class="col-md-2">
         <div class="form-group">
           <label class="label">Institution</label>
-          <input name="institution" v-model="institution" v-validate="'required|alpha'"
+          <input name="institution"  v-validate="'required|alpha'"
             :class="{'form-control': true }"
             type="text" placeholder="Eg NorthGate school" required>
           <i v-show="errors.has('institution')" class="fa fa-warning"></i>
@@ -133,7 +133,7 @@
         <div class="col-sm-2">
       <div class="form-group">
         <label class="label">From Date/Year</label>
-        <input name="fromDate" v-model="idNumber" v-validate="'required|numeric'"
+        <input name="fromDate"  v-validate="'required|numeric'"
           :class="{'form-control': true }"
           type="date" placeholder="" required>
         <i v-show="errors.has('fromDate')" class="fa fa-warning"></i>
@@ -145,7 +145,7 @@
     <div class="col-sm-2">
       <div class="form-group">
         <label class="label">To Date/Year</label>
-        <input name="toDate" v-model="idNumber" v-validate="'required|numeric'"
+        <input name="toDate"  v-validate="'required|numeric'"
           :class="{'form-control': true }"
           type="date" placeholder="" required>
         <i v-show="errors.has('toDate')" class="fa fa-warning"></i>
@@ -157,7 +157,7 @@
        <div class="col-md-2">
         <div class="form-group">
           <label class="label">Qualification</label>
-          <input name="roles" v-model="qualification" v-validate="'required|alpha'"
+          <input name="roles"  v-validate="'required|alpha'"
             :class="{'form-control': true }"
             type="text" placeholder="Eg KCSE Certificate" required>
           <i v-show="errors.has('qualification')" class="fa fa-warning"></i>
