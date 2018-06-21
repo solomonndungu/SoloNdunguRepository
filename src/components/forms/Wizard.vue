@@ -14,22 +14,25 @@
                 <div class="tab-pane active" role="tabpanel" id="step1">
                   <personal-form></personal-form>
                 </div>
-                <div class="tab-pane" role="tabpanel" id="step2">
-                  <contact-form></contact-form>
+                <div class="tab-pane active" role="tabpanel" id="step2">
+                  <membership-form></membership-form>
                 </div>
                 <div class="tab-pane" role="tabpanel" id="step3">
-                  <location-form></location-form>
+                  <contact-form></contact-form>
                 </div>
                 <div class="tab-pane" role="tabpanel" id="step4">
-                  <profession-form></profession-form>
+                  <location-form></location-form>
                 </div>
                 <div class="tab-pane" role="tabpanel" id="step5">
-                  <spiritual-form></spiritual-form>
+                  <profession-form></profession-form>
                 </div>
                 <div class="tab-pane" role="tabpanel" id="step6">
-                  <academic-form></academic-form>
+                  <spiritual-form></spiritual-form>
                 </div>
                 <div class="tab-pane" role="tabpanel" id="step7">
+                  <academic-form></academic-form>
+                </div>
+                <div class="tab-pane" role="tabpanel" id="step8">
                   <family-form></family-form>
                 </div>
                 <div class="tab-pane" role="tabpanel" id="complete">
@@ -57,6 +60,7 @@ import AcademicForm from './register/AcademicForm';
 import FamilyForm from './register/FamilyForm';
 import WizardNav from './register/WizardNav';
 import WizardFooter from './register/WizardFooter';
+import Membership from './register/Membership';
 
 export default {
   name: 'Wizard',
@@ -71,6 +75,7 @@ export default {
     'family-form': FamilyForm,
     'wizard-nav': WizardNav,
     'wizard-footer': WizardFooter,
+    'membership-form': Membership,
   },
   methods: {
   },

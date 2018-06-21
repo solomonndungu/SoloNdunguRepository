@@ -6,117 +6,100 @@
       </h3>
       <hr>
       <div class="row mar_ned">
-      </div>
-      <div class="row mar_ned">
         <div class="col-md-4 col-xs-3">
           <p align="right">
-            <b>Date of birth</b>
+            <b>Primary Email</b>
           </p>
         </div>
         <div class="col-md-8 col-xs-9">
-          <div class="row">
-            <div class="col-md-4 col-xs-4 wdth">
-              <select name="visa_status" id="visa_status"
-              class="dropselectsec1">
-                <option value="">Date</option>
-                <option value="2">1</option>
-              </select>
-            </div>
-            <div class="col-md-4 col-xs-4 wdth">
-              <select name="visa_status" id="visa_status"
-              class="dropselectsec1">
-                <option value="">Month</option>
-                <option value="2">Jan</option>
-              </select>
-            </div>
-            <div class="col-md-4 col-xs-4 wdth">
-              <select name="visa_status" id="visa_status"
-              class="dropselectsec1">
-                <option value="">Year</option>
-                <option value="2">1990</option>
-              </select>
-            </div>
-          </div>
+          <input type="text" name="email" id="email"
+          placeholder="Primary Email"
+          class="dropselectsec" autocomplete="off" v-model="priEmail">
         </div>
       </div>
       <div class="row mar_ned">
         <div class="col-md-4 col-xs-3">
           <p align="right">
-            <b>Marital Status</b>
+            <b>Alternative Email</b>
           </p>
         </div>
         <div class="col-md-8 col-xs-9">
-          <label class="radio-inline">
-            <input type="radio" name="inlineRadioOptions" id="inlineRadio2"
-            value="option2"> Single
-          </label>
-          <label class="radio-inline">
-            <input type="radio" name="inlineRadioOptions" id="inlineRadio3"
-            value="option3"> Married
-          </label>
+          <input type="text" name="altemail" id="altemail"
+          placeholder="Alternative Email"
+          class="dropselectsec" autocomplete="off" v-model="altEmail">
         </div>
       </div>
       <div class="row mar_ned">
         <div class="col-md-4 col-xs-3">
           <p align="right">
-            <b>Highest Education</b>
+            <b>Primary Phone Number</b>
           </p>
         </div>
         <div class="col-md-8 col-xs-9">
-          <select name="highest_qualification" id="highest_qualification"
-          class="dropselectsec">
-            <option value=""> Select Highest Education</option>
-            <option value="1">Ph.D</option>
-          </select>
+          <input type="text" name="phoneno" id="phoneno"
+          placeholder="Primary Phone number"
+          class="dropselectsec" autocomplete="off" v-model="priEmail">
         </div>
       </div>
       <div class="row mar_ned">
         <div class="col-md-4 col-xs-3">
           <p align="right">
-            <b>Specialization</b>
+            <b>Home Phone Number</b>
           </p>
         </div>
         <div class="col-md-8 col-xs-9">
-          <input type="text" name="specialization" id="specialization"
-          placeholder="Specialization"
-          class="dropselectsec" autocomplete="off">
+          <input type="text" name="homephone" id="homephone"
+          placeholder="Home Phone Number"
+          class="dropselectsec" autocomplete="off" v-model="homePhone">
         </div>
       </div>
       <div class="row mar_ned">
         <div class="col-md-4 col-xs-3">
           <p align="right">
-            <b>Year of Passed Out</b>
+            <b>Work phone number</b>
           </p>
         </div>
         <div class="col-md-8 col-xs-9">
-          <select name="year_of_passedout" id="year_of_passedout"
-          class="birthdrop">
-            <option value="">Year</option>
-            <option value="1980">1980</option>
-          </select>
+          <input type="text" name="workphone" id="workphone"
+          placeholder="work phone number"
+          class="dropselectsec" autocomplete="off" v-model="workphone">
         </div>
       </div>
-      <div class="row mar_ned">
+          <div class="row mar_ned">
         <div class="col-md-4 col-xs-3">
           <p align="right">
-            <b>Total Experience</b>
+            <b>Postal Address</b>
           </p>
         </div>
         <div class="col-md-8 col-xs-9">
-          <div class="row">
-            <div class="col-md-6 col-xs-6 wdth">
-              <select name="visa_status" id="visa_status"
-              class="dropselectsec1">
-                <option value="">Month</option>
-                <option value="2">Jan</option>
-              </select>
-            </div>
-            <div class="col-md-6 col-xs-6 wdth">
-            </div>
-          </div>
+          <input type="text" name="family" id="family"
+          placeholder="Postal Address"
+          class="dropselectsec" autocomplete="off" v-model="postalAddress">
         </div>
       </div>
-      <div class="row mar_ned">
+                <div class="row mar_ned">
+        <div class="col-md-4 col-xs-3">
+          <p align="right">
+            <b>Postal code</b>
+          </p>
+        </div>
+        <div class="col-md-8 col-xs-9">
+          <input type="text" name="family" id="family"
+          placeholder="Postal code "
+          class="dropselectsec" autocomplete="off" v-model="postalCode">
+        </div>
+      </div>
+                <div class="row mar_ned">
+        <div class="col-md-4 col-xs-3">
+          <p align="right">
+            <b>Town</b>
+          </p>
+        </div>
+        <div class="col-md-8 col-xs-9">
+          <input type="text" name="family" id="family"
+          placeholder="Town"
+          class="dropselectsec" autocomplete="off" v-model="town">
+        </div>
       </div>
     </div>
   </div>
@@ -125,6 +108,18 @@
 <script>
 export default {
   name: 'ContactForm',
+  data: () => ({
+    return: {
+      priEmail: '',
+      altEmail: '',
+      priPhone: '',
+      homePhone: '',
+      workPhone: '',
+      postalAddress: '',
+      postalCode: '',
+      town: '',
+    },
+  }),
 };
 </script>
 

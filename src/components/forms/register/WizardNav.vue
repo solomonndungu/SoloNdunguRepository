@@ -12,6 +12,14 @@
         </li>
         <li role="presentation" class="disabled">
           <a href="#step2" data-toggle="tab" aria-controls="step2"
+          role="tab" title="Membership">
+            <span class="round-tab">
+              <i class="fa fa-handshake"></i>
+            </span>
+          </a>
+        </li>
+        <li role="presentation" class="disabled">
+          <a href="#step3" data-toggle="tab" aria-controls="step3"
           role="tab" title="Contact">
             <span class="round-tab">
               <i class="glyphicon glyphicon-phone"></i>
@@ -19,7 +27,7 @@
           </a>
         </li>
         <li role="presentation" class="disabled">
-          <a href="#step3" data-toggle="tab" aria-controls="step3"
+          <a href="#step4" data-toggle="tab" aria-controls="step4"
           role="tab" title="Location">
             <span class="round-tab">
               <i class="glyphicon glyphicon-globe"></i>
@@ -27,7 +35,7 @@
           </a>
         </li>
         <li role="presentation" class="disabled">
-          <a href="#step4" data-toggle="tab" aria-controls="step4"
+          <a href="#step5" data-toggle="tab" aria-controls="step5"
           role="tab" title="Profession">
             <span class="round-tab">
               <i class="glyphicon glyphicon-briefcase"></i>
@@ -35,7 +43,7 @@
           </a>
         </li>
         <li role="presentation" class="disabled">
-          <a href="#step5" data-toggle="tab" aria-controls="step5"
+          <a href="#step6" data-toggle="tab" aria-controls="step6"
           role="tab" title="Spiritual">
             <span class="round-tab">
               <i class="fa fa-eye"></i>
@@ -43,7 +51,7 @@
           </a>
         </li>
         <li role="presentation" class="disabled">
-          <a href="#step6" data-toggle="tab" aria-controls="step6"
+          <a href="#step7" data-toggle="tab" aria-controls="step7"
           role="tab" title="Academic">
             <span class="round-tab">
               <i class="glyphicon glyphicon-book"></i>
@@ -51,7 +59,7 @@
           </a>
         </li>
         <li role="presentation" class="disabled">
-          <a href="#step7" data-toggle="tab" aria-controls="step7"
+          <a href="#step8" data-toggle="tab" aria-controls="step8"
           role="tab" title="Family">
             <span class="round-tab">
               <i class="fa fa-group"></i>
