@@ -6,8 +6,6 @@
       </h5>
       <hr>
       <div class="row mar_ned">
-      </div>
-      <div class="row mar_ned">
         <div class="col-md-4 col-xs-3">
           <p align="right">
             <b>Date of birth</b>
