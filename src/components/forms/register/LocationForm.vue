@@ -6,118 +6,53 @@
     </h5>
     <hr>
     <div class="row mar_ned">
-    </div>
-    <div class="row mar_ned">
-      <div class="col-md-4 col-xs-3">
-        <p align="right">
-          <b>Date of irth</b>
-        </p>
-      </div>
-      <div class="col-md-8 col-xs-9">
-        <div class="row">
-          <div class="col-md-4 col-xs-4 wdth">
-            <select name="visa_status" id="visa_status"
-            class="dropselectsec1">
-              <option value="">Date</option>
-              <option value="2">1</option>
-            </select>
-          </div>
-          <div class="col-md-4 col-xs-4 wdth">
-            <select name="visa_status" id="visa_status"
-            class="dropselectsec1">
-              <option value="">Month</option>
-              <option value="2">Jan</option>
-            </select>
-          </div>
-          <div class="col-md-4 col-xs-4 wdth">
-            <select name="visa_status" id="visa_status"
-            class="dropselectsec1">
-              <option value="">Year</option>
-              <option value="2">1990</option>
-            </select>
-          </div>
+        <div class="col-md-4 col-xs-3">
+          <p align="right">
+            <b>Country of Residence</b>
+          </p>
+        </div>
+        <div class="col-md-8 col-xs-9">
+          <input type="text" name="email" id="email"
+          placeholder="Coutry of Residence"
+          class="dropselectsec" autocomplete="off" v-model="location.country">
         </div>
       </div>
-    </div>
-    <div class="row mar_ned">
-      <div class="col-md-4 col-xs-3">
-        <p align="right">
-          <b>Marital Status</b>
-        </p>
-      </div>
-      <div class="col-md-8 col-xs-9">
-        <label class="radio-inline">
-          <input type="radio" name="inlineRadioOptions" id="inlineRadio2"
-          value="option2"> Single
-        </label>
-        <label class="radio-inline">
-          <input type="radio" name="inlineRadioOptions" id="inlineRadio3"
-          value="option3"> Married
-        </label>
-      </div>
-    </div>
-    <div class="row mar_ned">
-      <div class="col-md-4 col-xs-3">
-        <p align="right">
-          <b>Highest Education</b>
-        </p>
-      </div>
-      <div class="col-md-8 col-xs-9">
-        <select name="highest_qualification" id="highest_qualification"
-        class="dropselectsec">
-          <option value=""> Select Highest Education</option>
-          <option value="1">Ph.D</option>
-        </select>
-      </div>
-    </div>
-    <div class="row mar_ned">
-      <div class="col-md-4 col-xs-3">
-        <p align="right">
-          <b>Specialization</b>
-        </p>
-      </div>
-      <div class="col-md-8 col-xs-9">
-        <input type="text" name="specialization" id="specialization"
-        placeholder="Specialization"
-        class="dropselectsec" autocomplete="off">
-      </div>
-    </div>
-    <div class="row mar_ned">
-      <div class="col-md-4 col-xs-3">
-        <p align="right">
-          <b>Year of Passed Out</b>
-        </p>
-      </div>
-      <div class="col-md-8 col-xs-9">
-        <select name="year_of_passedout" id="year_of_passedout"
-        class="irthdrop">
-          <option value="">Year</option>
-          <option value="1980">1980</option>
-        </select>
-      </div>
-    </div>
-    <div class="row mar_ned">
-      <div class="col-md-4 col-xs-3">
-        <p align="right">
-          <b>Total Experience</b>
-        </p>
-      </div>
-      <div class="col-md-8 col-xs-9">
-        <div class="row">
-          <div class="col-md-6 col-xs-6 wdth">
-            <select name="visa_status" id="visa_status"
-            class="dropselectsec1">
-              <option value="">Month</option>
-              <option value="2">Jan</option>
-            </select>
-          </div>
-          <div class="col-md-6 col-xs-6 wdth">
-          </div>
+      <div class="row mar_ned">
+        <div class="col-md-4 col-xs-3">
+          <p align="right">
+            <b>City/County of Residence</b>
+          </p>
+        </div>
+        <div class="col-md-8 col-xs-9">
+          <input type="text" name="email" id="email"
+          placeholder="City/County of Residence"
+          class="dropselectsec" autocomplete="off" v-model="location.city">
         </div>
       </div>
-    </div>
-    <div class="row mar_ned">
-    </div>
+          <div class="row mar_ned">
+        <div class="col-md-4 col-xs-3">
+          <p align="right">
+            <b>Nationality</b>
+          </p>
+        </div>
+        <div class="col-md-8 col-xs-9">
+          <input type="text" name="email" id="email"
+          placeholder="Nationality"
+          class="dropselectsec" autocomplete="off" v-model="location.nationality">
+        </div>
+      </div>
+          <div class="row mar_ned">
+        <div class="col-md-4 col-xs-3">
+          <p align="right">
+            <b>Area of Residence</b>
+          </p>
+        </div>
+        <div class="col-md-8 col-xs-9">
+          <input type="text" name="email" id="email"
+          placeholder="Area of Residence"
+          class="dropselectsec" autocomplete="off" v-model="location.area">
+        </div>
+      </div>
   </div>
 </div>
 </template>
@@ -125,6 +60,14 @@
 <script>
 export default {
   name: 'LocationForm',
+  props: {
+    location: {},
+  },
+  data() {
+    return {
+
+    };
+  },
 };
 </script>
 

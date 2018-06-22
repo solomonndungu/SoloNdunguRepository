@@ -18,7 +18,7 @@
                   <contact-form :contact="user.contact"></contact-form>
                 </div>
                 <div class="tab-pane" role="tabpanel" id="step3">
-                  <location-form></location-form>
+                  <location-form :location="user.location"></location-form>
                 </div>
                 <div class="tab-pane" role="tabpanel" id="step4">
                   <profession-form :profession="user.profession"></profession-form>
@@ -42,6 +42,7 @@
                 {{ user.academic }}
                 {{ user.spiritual }}
                 {{ user.profession }}
+                {{ user.location}}
               </div>
             </form>
           </div>
@@ -86,6 +87,7 @@ export default {
         academic: {},
         spiritual: {},
         profession: {},
+        location: {},
       },
     };
   },
