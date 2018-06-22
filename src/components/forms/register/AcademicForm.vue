@@ -1,130 +1,95 @@
 <template>
-  <div class="">
+ <div class="">
     <div class="step6">
       <h3>
         <b>Academic Details</b>
       </h3>
       <hr>
-      <div class="row mar_ned">
-      </div>
-      <div class="row mar_ned">
-        <div class="col-md-4 col-xs-3">
-          <p align="right">
-            <b>Date of birth</b>
-          </p>
+      <h5>
+        <b>Tertiary Education(University/college/professional certification) </b>
+      </h5>
+      <div class="col-md-8 col-xs-9">
+          <input type="text" name="email" id="email"
+          placeholder="Institution"
+          class="dropselectsec" autocomplete="off" v-model="academic.institution">
         </div>
         <div class="col-md-8 col-xs-9">
-          <div class="row">
-            <div class="col-md-4 col-xs-4 wdth">
-              <select name="visa_status" id="visa_status"
-              class="dropselectsec1">
-                <option value="">Date</option>
-                <option value="2">1</option>
-              </select>
-            </div>
-            <div class="col-md-4 col-xs-4 wdth">
-              <select name="visa_status" id="visa_status"
-              class="dropselectsec1">
-                <option value="">Month</option>
-                <option value="2">Jan</option>
-              </select>
-            </div>
-            <div class="col-md-4 col-xs-4 wdth">
-              <select name="visa_status" id="visa_status"
-              class="dropselectsec1">
-                <option value="">Year</option>
-                <option value="2">1990</option>
-              </select>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row mar_ned">
-        <div class="col-md-4 col-xs-3">
-          <p align="right">
-            <b>Marital Status</b>
-          </p>
+          <input type="text" name="email" id="email"
+          placeholder="fromDate"
+          class="dropselectsec" autocomplete="off" v-model="academic.from_date">
         </div>
         <div class="col-md-8 col-xs-9">
-          <label class="radio-inline">
-            <input type="radio" name="inlineRadioOptions" id="inlineRadio2"
-            value="option2"> Single
-          </label>
-          <label class="radio-inline">
-            <input type="radio" name="inlineRadioOptions" id="inlineRadio3"
-            value="option3"> Married
-          </label>
-        </div>
-      </div>
-      <div class="row mar_ned">
-        <div class="col-md-4 col-xs-3">
-          <p align="right">
-            <b>Highest Education</b>
-          </p>
+          <input type="text" name="email" id="email"
+          placeholder="To Date"
+          class="dropselectsec" autocomplete="off" v-model="academic.to_date">
         </div>
         <div class="col-md-8 col-xs-9">
-          <select name="highest_qualification" id="highest_qualification"
-          class="dropselectsec">
-            <option value=""> Select Highest Education</option>
-            <option value="1">Ph.D</option>
-          </select>
+          <input type="text" name="email" id="email"
+          placeholder="your Roles"
+          class="dropselectsec" autocomplete="off" v-model="academic.qualification">
         </div>
-      </div>
-      <div class="row mar_ned">
-        <div class="col-md-4 col-xs-3">
-          <p align="right">
-            <b>Specialization</b>
-          </p>
-        </div>
-        <div class="col-md-8 col-xs-9">
-          <input type="text" name="specialization" id="specialization"
-          placeholder="Specialization"
-          class="dropselectsec" autocomplete="off">
-        </div>
-      </div>
-      <div class="row mar_ned">
-        <div class="col-md-4 col-xs-3">
-          <p align="right">
-            <b>Year of Passed Out</b>
-          </p>
+        <button>Add</button>
+
+         <h5>
+        <b>Secondary School </b>
+      </h5>
+      <div class="col-md-8 col-xs-9">
+          <input type="text" name="email" id="email"
+          placeholder="Institution"
+          class="dropselectsec" autocomplete="off" v-model="academic.secondary">
         </div>
         <div class="col-md-8 col-xs-9">
-          <select name="year_of_passedout" id="year_of_passedout"
-          class="birthdrop">
-            <option value="">Year</option>
-            <option value="1980">1980</option>
-          </select>
-        </div>
-      </div>
-      <div class="row mar_ned">
-        <div class="col-md-4 col-xs-3">
-          <p align="right">
-            <b>Total Experience</b>
-          </p>
+          <input type="text" name="email" id="email"
+          placeholder="fromDate"
+          class="dropselectsec" autocomplete="off" v-model="academic.from_date">
         </div>
         <div class="col-md-8 col-xs-9">
-          <div class="row">
-            <div class="col-md-6 col-xs-6 wdth">
-              <select name="visa_status" id="visa_status"
-              class="dropselectsec1">
-                <option value="">Month</option>
-                <option value="2">Jan</option>
-              </select>
-            </div>
-            <div class="col-md-6 col-xs-6 wdth">
-            </div>
-          </div>
+          <input type="text" name="email" id="email"
+          placeholder="To Date"
+          class="dropselectsec" autocomplete="off" v-model="academic.to_date">
         </div>
-      </div>
-      <div class="row mar_ned">
-      </div>
+        <div class="col-md-8 col-xs-9">
+          <input type="text" name="email" id="email"
+          placeholder="your Roles"
+          class="dropselectsec" autocomplete="off" v-model="academic.qualification">
+        </div>
+        <button>Add</button>
+
+         <h5>
+        <b>Primary School</b>
+      </h5>
+      <div class="col-md-8 col-xs-9">
+          <input type="text" name="email" id="email"
+          placeholder="Institution"
+          class="dropselectsec" autocomplete="off" v-model="academic.primary">
+        </div>
+        <div class="col-md-8 col-xs-9">
+          <input type="text" name="email" id="email"
+          placeholder="fromDate"
+          class="dropselectsec" autocomplete="off" v-model="academic.from_date">
+        </div>
+        <div class="col-md-8 col-xs-9">
+          <input type="text" name="email" id="email"
+          placeholder="To Date"
+          class="dropselectsec" autocomplete="off" v-model="academic.to_date">
+        </div>
+        <div class="col-md-8 col-xs-9">
+          <input type="text" name="email" id="email"
+          placeholder="your Roles"
+          class="dropselectsec" autocomplete="off" v-model="academic.qualification">
+        </div>
+        <button>Add</button>
     </div>
   </div>
+
 </template>
 
 <script>
 export default {
   name: 'AcademicForm',
+  props: {
+    academic: {},
+  },
 };
 </script>
 

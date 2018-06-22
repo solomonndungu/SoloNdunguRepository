@@ -5,126 +5,75 @@
         <b>Profession Details</b>
       </h5>
       <hr>
-      <div class="row mar_ned">
-      </div>
-      <div class="row mar_ned">
-        <div class="col-md-4 col-xs-3">
-          <p align="right">
-            <b>Date of birth</b>
-          </p>
-        </div>
-        <div class="col-md-8 col-xs-9">
+          <div class="row mar_ned">
+       <div class="col-md-4 col-xs-3">
+           <p align="right">
+             <b>Occupation Status</b>
+           </p>
+         <div class="col-md-8 col-xs-9">
           <div class="row">
-            <div class="col-md-4 col-xs-4 wdth">
-              <select name="visa_status" id="visa_status"
-              class="dropselectsec1">
-                <option value="">Date</option>
-                <option value="2">1</option>
-              </select>
-            </div>
-            <div class="col-md-4 col-xs-4 wdth">
-              <select name="visa_status" id="visa_status"
-              class="dropselectsec1">
-                <option value="">Month</option>
-                <option value="2">Jan</option>
-              </select>
-            </div>
-            <div class="col-md-4 col-xs-4 wdth">
-              <select name="visa_status" id="visa_status"
-              class="dropselectsec1">
-                <option value="">Year</option>
-                <option value="2">1990</option>
-              </select>
-            </div>
-          </div>
-        </div>
-      </div>
+         <div class="col-md-4 col-xs-4 wdth">
+            <label for="employed">Employed</label>
+            <input type="radio" id="yes" value="yes" v-model="profession.status">
+            <label for="selfEmployed">Self Employed</label>
+           <input type="radio" id="no" value="no" v-model="profession.status">
+           <label for="unEmployed">UnEmployed</label>
+           <input type="radio" id="no" value="no" v-model="profession.status">
+           </div>
+         </div>
+       </div>
       <div class="row mar_ned">
         <div class="col-md-4 col-xs-3">
           <p align="right">
-            <b>Marital Status</b>
+            <b>Area of Expertise</b>
           </p>
         </div>
         <div class="col-md-8 col-xs-9">
-          <label class="radio-inline">
-            <input type="radio" name="inlineRadioOptions" id="inlineRadio2"
-            value="option2"> Single
-          </label>
-          <label class="radio-inline">
-            <input type="radio" name="inlineRadioOptions" id="inlineRadio3"
-            value="option3"> Married
-          </label>
+          <input type="text" name="email" id="email"
+          placeholder="expertise"
+          class="dropselectsec" autocomplete="off" v-model="profession.expertise">
         </div>
       </div>
-      <div class="row mar_ned">
-        <div class="col-md-4 col-xs-3">
-          <p align="right">
-            <b>Highest Education</b>
-          </p>
+      <div>
+        <button>Add</button>
+      </div>
+      <h5>
+        <b>Work/Employemnt History </b>
+      </h5>
+      <div class="col-md-8 col-xs-9">
+          <input type="text" name="email" id="email"
+          placeholder="Institution"
+          class="dropselectsec" autocomplete="off" v-model="profession.institution">
         </div>
         <div class="col-md-8 col-xs-9">
-          <select name="highest_qualification" id="highest_qualification"
-          class="dropselectsec">
-            <option value=""> Select Highest Education</option>
-            <option value="1">Ph.D</option>
-          </select>
-        </div>
-      </div>
-      <div class="row mar_ned">
-        <div class="col-md-4 col-xs-3">
-          <p align="right">
-            <b>Specialization</b>
-          </p>
+          <input type="text" name="email" id="email"
+          placeholder="fromDate"
+          class="dropselectsec" autocomplete="off" v-model="profession.from_date">
         </div>
         <div class="col-md-8 col-xs-9">
-          <input type="text" name="specialization" id="specialization"
-          placeholder="Specialization"
-          class="dropselectsec" autocomplete="off">
-        </div>
-      </div>
-      <div class="row mar_ned">
-        <div class="col-md-4 col-xs-3">
-          <p align="right">
-            <b>Year of Passed Out</b>
-          </p>
+          <input type="text" name="email" id="email"
+          placeholder="To Date"
+          class="dropselectsec" autocomplete="off" v-model="profession.to_date">
         </div>
         <div class="col-md-8 col-xs-9">
-          <select name="year_of_passedout" id="year_of_passedout"
-          class="birthdrop">
-            <option value="">Year</option>
-            <option value="1980">1980</option>
-          </select>
+          <input type="text" name="email" id="email"
+          placeholder="your Roles"
+          class="dropselectsec" autocomplete="off" v-model="profession.roles">
         </div>
-      </div>
-      <div class="row mar_ned">
-        <div class="col-md-4 col-xs-3">
-          <p align="right">
-            <b>Total Experience</b>
-          </p>
-        </div>
-        <div class="col-md-8 col-xs-9">
-          <div class="row">
-            <div class="col-md-6 col-xs-6 wdth">
-              <select name="visa_status" id="visa_status"
-              class="dropselectsec1">
-                <option value="">Month</option>
-                <option value="2">Jan</option>
-              </select>
-            </div>
-            <div class="col-md-6 col-xs-6 wdth">
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row mar_ned">
-      </div>
+        <button>Add</button>
+       </div>
+    </div>
     </div>
   </div>
+
 </template>
 
 <script>
 export default {
   name: 'ProfessionForm',
+  props: {
+    profession: {},
+  }
 };
 </script>
 

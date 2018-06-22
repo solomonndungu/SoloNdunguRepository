@@ -17,27 +17,31 @@
                 <div class="tab-pane" role="tabpanel" id="step2">
                   <contact-form :contact="user.contact"></contact-form>
                 </div>
-                <!-- <div class="tab-pane" role="tabpanel" id="step3">
+                <div class="tab-pane" role="tabpanel" id="step3">
                   <location-form></location-form>
                 </div>
                 <div class="tab-pane" role="tabpanel" id="step4">
-                  <profession-form></profession-form>
+                  <profession-form :profession="user.profession"></profession-form>
                 </div>
                 <div class="tab-pane" role="tabpanel" id="step5">
-                  <spiritual-form></spiritual-form>
+                  <spiritual-form :spiritual="user.spiritual"></spiritual-form>
                 </div>
                 <div class="tab-pane" role="tabpanel" id="step6">
-                  <academic-form></academic-form>
+                  <academic-form :academic="user.academic"></academic-form>
                 </div>
                 <div class="tab-pane" role="tabpanel" id="step7">
-                  <family-form></family-form>
+                  <family-form :family="user.family"></family-form>
                 </div>
                 <div class="tab-pane" role="tabpanel" id="complete">
-                </div> -->
+                </div>
                 <wizard-footer :user='user'></wizard-footer>
                 <div class="clearfix"></div>
                 {{ user.personal }}
                 {{ user.contact }}
+                {{ user.family }}
+                {{ user.academic }}
+                {{ user.spiritual }}
+                {{ user.profession }}
               </div>
             </form>
           </div>
@@ -78,6 +82,10 @@ export default {
       user: {
         contact: {},
         personal: {},
+        family: {},
+        academic: {},
+        spiritual: {},
+        profession: {},
       },
     };
   },
