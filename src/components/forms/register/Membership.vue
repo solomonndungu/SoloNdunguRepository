@@ -53,6 +53,15 @@
         </div>
       </div>
   </div>
+
+     <li class="col-sm-3 col-sm-offset-2">
+       <router-link to="/home/personal">
+        <span class="btn btn-info btn-block">
+          Previous
+        </span>
+        </router-link>
+      </li>
+
 </div>
 
 </template>
@@ -67,6 +76,9 @@ export default {
       month: '',
       year: '',
     };
+  },
+  beforeDestroy: function () {
+    console.log('membership');
   },
 };
 </script>

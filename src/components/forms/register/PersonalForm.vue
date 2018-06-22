@@ -45,7 +45,17 @@
         </label>
       </div>
       </div>
+
     </div>
+
+      <li class="col-sm-3 col-sm-offset-2">
+        <router-link to="/home/membership">
+        <span class="btn btn-info btn-block">
+          Save and continue
+        </span>
+         </router-link>
+      </li>
+
   </div>
 </template>
 
@@ -59,6 +69,30 @@ export default {
       lastName: '',
     };
   },
+  beforeCreate: function (){
+    console.log('before create pi')
+  },
+  created: function (){
+    console.log('created')
+  },
+  beforeMount: function (){
+    console.log('before mount pi')
+  },
+  mounted: function (){
+    console.log('mounted personal info');
+  },
+  beforeUpdate: function (){
+    console.log('beforeupdate pi')
+  },
+  updated: function (){
+    console.log('updating personal info');
+  },
+  beforeDestroy: function(){
+    console.log('before destroy personal info')
+  },
+  destroyed: function(){
+    console.log('destroyed personal info');
+  }
 };
 </script>
 

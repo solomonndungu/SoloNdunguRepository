@@ -13,6 +13,10 @@ import InternalServerError from '../pages/errors/500';
 // Home Routes
 import Home from '../pages/Home';
 
+// Home childrens
+import PersonalForm from '../components/forms/register/PersonalForm';
+import Membership from '../components/forms/register/Membership';
+
 Vue.use(Router);
 
 export default new Router({
@@ -41,6 +45,18 @@ export default new Router({
       path: '/home',
       name: 'Home',
       component: Home,
+      children: [
+        {
+          path: 'personal',
+          name: 'Personal',
+          component: PersonalForm,
+        },
+        {
+          path: 'membership',
+          name: 'Membership',
+          component: Membership,
+        },
+      ],
     },
   ],
 });

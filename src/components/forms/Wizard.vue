@@ -84,7 +84,11 @@ export default {
   },
   methods: {
     next() {
+      console.log('moving on')
     },
+  },
+  updated: function (){
+    console.log('updating wizard info');
   },
 };
 </script>
