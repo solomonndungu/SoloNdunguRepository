@@ -9,15 +9,15 @@
         <div class="ibox-content">
           <div class="wizard">
             <wizard-nav></wizard-nav>
-            <form role="form">
+            <form role="form" @submit.prevent="sumbitMethod">
               <div class="tab-content">
                 <div class="tab-pane active" role="tabpanel" id="step1">
-                  <personal-form></personal-form>
+                  <personal-form :personal="user.personal"></personal-form>
                 </div>
                 <div class="tab-pane" role="tabpanel" id="step2">
-                  <contact-form></contact-form>
+                  <contact-form :contact="user.contact"></contact-form>
                 </div>
-                <div class="tab-pane" role="tabpanel" id="step3">
+                <!-- <div class="tab-pane" role="tabpanel" id="step3">
                   <location-form></location-form>
                 </div>
                 <div class="tab-pane" role="tabpanel" id="step4">
@@ -33,10 +33,11 @@
                   <family-form></family-form>
                 </div>
                 <div class="tab-pane" role="tabpanel" id="complete">
-
-                </div>
-                <wizard-footer></wizard-footer>
+                </div> -->
+                <wizard-footer :user='user'></wizard-footer>
                 <div class="clearfix"></div>
+                {{ user.personal }}
+                {{ user.contact }}
               </div>
             </form>
           </div>
@@ -73,7 +74,12 @@ export default {
 
   },
   data() {
-    return {};
+    return {
+      user: {
+        contact: {},
+        personal: {},
+      },
+    };
   },
 };
 </script>

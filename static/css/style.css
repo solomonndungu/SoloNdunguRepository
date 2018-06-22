@@ -1069,14 +1069,14 @@ button.dim:active:before {
 .label {
   background-color: #d1dade;
   color: #5e5e5e;
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 600;
   padding: 3px 8px;
   text-shadow: none;
+  font-size: 3em;
 }
 .nav .label,
 .ibox .label {
-  font-size: 10px;
+  font-size: 1.1em;
 }
 .badge {
   background-color: #d1dade;

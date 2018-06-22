@@ -2,29 +2,35 @@ import Vue from 'vue';
 import Router from 'vue-router';
 
 // Login & Registeration
-import Login from '../pages/auth/Login';
-import Register from '../pages/auth/Register';
-import ForgotPassword from '../pages/auth/ForgotPassword';
+import Login from '@/pages/auth/Login';
+import Signup from '@/pages/auth/Signup';
+import ForgotPassword from '@/pages/auth/ForgotPassword';
 
 // Error Routes
-import PageNotFoundError from '../pages/errors/404';
-import InternalServerError from '../pages/errors/500';
+import PageNotFoundError from '@/pages/errors/404';
+import InternalServerError from '@/pages/errors/500';
 
 // Home Routes
-import Home from '../pages/Home';
+import RegisterRoutes from './register';
 
 Vue.use(Router);
 
 export default new Router({
   routes: [
     {
+      path: '*',
+      redirect: '/404',
+    }, {
       path: '/',
+      redirect: '/login',
+    }, {
+      path: '/login',
       name: 'Login',
       component: Login,
     }, {
-      path: '/register',
-      name: 'Register',
-      component: Register,
+      path: '/signup',
+      name: 'signup',
+      component: Signup,
     }, {
       path: '/forgot',
       name: 'ForgotPassword',
@@ -37,10 +43,7 @@ export default new Router({
       path: '/500',
       name: 'InternalServerError',
       component: InternalServerError,
-    }, {
-      path: '/home',
-      name: 'Home',
-      component: Home,
     },
+    RegisterRoutes,
   ],
 });

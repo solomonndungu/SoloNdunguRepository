@@ -10,7 +10,7 @@
       </div>
       <h3>Register to LRC-CMS</h3>
       <p>Create account to see it in action.</p>
-      <register-form></register-form>
+      <signup-form></signup-form>
       <p class="m-t">
         <small>Neostream Technology Group &copy; 2018</small>
       </p>
@@ -20,12 +20,12 @@
 
 
 <script>
-import RegisterForm from '../../components/forms/auth/RegisterForm';
+import SignupForm from '@/components/forms/auth/SignupForm';
 
 export default {
-  name: 'Register',
+  name: 'Signup',
   components: {
-    'register-form': RegisterForm,
+    'signup-form': SignupForm,
   },
 };
 </script>

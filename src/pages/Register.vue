@@ -1,4 +1,4 @@
-<template>
+<template lang="html">
   <div id="wrapper">
     <sidebar-nav></sidebar-nav>
     <div id="page-wrapper" class="gray-bg">
@@ -10,9 +10,11 @@
 </template>
 
 <script>
-import Footer from '../components/layouts/footer';
-import Sidebar from '../components/layouts/navigation/Sidebar';
-import Navbar from '../components/layouts/navigation/Navbar';
+import Footer from '@/components/layouts/footer';
+import Sidebar from '@/components/layouts/navigation/Sidebar';
+import Navbar from '@/components/layouts/navigation/Navbar';
+import Wizard from '@/components/forms/Wizard';
+
 export default {
   name: 'Home',
   components: {
@@ -24,6 +26,5 @@ export default {
 };
 </script>
 
-<style>
-
+<style lang="css">
 </style>

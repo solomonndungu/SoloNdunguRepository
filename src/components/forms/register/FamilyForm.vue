@@ -124,7 +124,7 @@
 
 <script>
 export default {
-  name: 'Family',
+  name: 'FamilyForm',
 };
 </script>
 
